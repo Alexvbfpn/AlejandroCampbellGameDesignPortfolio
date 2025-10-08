@@ -12,6 +12,26 @@
   /**
    * Header toggle
    */
+  // Esperar a que el header se haya cargado dinámicamente
+  document.addEventListener("headerLoaded", () => {
+    const headerToggleBtn = document.querySelector('.header-toggle');
+
+    if (!headerToggleBtn) {
+      console.warn("No se encontró el botón de toggle del header.");
+      return;
+    }
+
+    function headerToggle() {
+      const header = document.querySelector('#header');
+      header.classList.toggle('header-show');
+      headerToggleBtn.classList.toggle('bi-list');
+      headerToggleBtn.classList.toggle('bi-x');
+    }
+
+    headerToggleBtn.addEventListener('click', headerToggle);
+  });
+  // OLD
+  /**
   const headerToggleBtn = document.querySelector('.header-toggle');
 
   function headerToggle() {
@@ -19,7 +39,17 @@
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
   }
+  //
   headerToggleBtn.addEventListener('click', headerToggle);
+  document.addEventListener("headerLoaded", () => {
+    const headerToggleBtn = document.querySelector('.header-toggle');
+    if (headerToggleBtn) {
+      headerToggleBtn.addEventListener('click', headerToggle);
+    } else {
+      console.warn("No se encontró el botón de toggle del header");
+    }
+  });
+   */
 
   /**
    * Hide mobile nav on same-page/hash links

@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.appendChild(newScript);
                 oldScript.remove();
             });
+            document.dispatchEvent(new Event("headerLoaded"))
         })
         .catch(err => console.error(err));
 });
