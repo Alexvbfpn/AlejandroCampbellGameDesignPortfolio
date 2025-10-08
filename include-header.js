@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("../header.html")
+    fetch("header.html")
         .then(response => {
             if (!response.ok) throw new Error("No se pudo cargar el header");
             return response.text();
