@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("header.html")
+
+    // Detecta si la página está en una subcarpeta
+    const depth = window.location.pathname.split("/").length - 2;
+    const prefix = depth > 0 ? "../".repeat(depth) : "";
+    const headerPath = `${prefix}header.html`;
+
+    fetch(headerPath)
         .then(response => {
             if (!response.ok) throw new Error("No se pudo cargar el header");
             return response.text();

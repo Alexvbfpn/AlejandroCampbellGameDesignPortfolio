@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("footer.html")
+
+    const depth = window.location.pathname.split("/").length - 2;
+    const prefix = depth > 0 ? "../".repeat(depth) : "";
+    const footerPath = `${prefix}footer.html`;
+
+    fetch(footerPath)
         .then(response => {
             if (!response.ok) throw new Error("No se pudo cargar el footer");
             return response.text();
