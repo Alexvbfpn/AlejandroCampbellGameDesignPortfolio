@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const depth = window.location.pathname.split("/").length - 2;
-    const prefix = depth > 0 ? "../".repeat(depth) : "";
-    const footerPath = `${prefix}footer.html`;
+    const pathParts = window.location.pathname.split("/");
+    const repoName = pathParts[1];
+    const isLocal = window.location.origin.includes("localhost") || window.location.origin.includes("127.0.0.1");
+    const basePath = isLocal ? "" : `/${repoName}`;
+    const footerPath = `${basePath}/footer.html`;
 
     fetch(footerPath)
         .then(response => {
