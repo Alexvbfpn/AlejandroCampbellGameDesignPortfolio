@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(data =>
         {
-            document.getElementById("footer-container").innerHTML = data;
+            document.getElementById("footer").innerHTML = data;
 
             // Reejecuta los scripts del footer (si la plantilla lo necesita)
             const scripts = document.querySelectorAll("#footer-container script");
