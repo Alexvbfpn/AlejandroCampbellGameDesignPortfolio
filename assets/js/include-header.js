@@ -29,6 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 oldScript.remove();
             });
             document.dispatchEvent(new Event("headerLoaded"))
+
+            const homeLink = document.getElementById("home-link");
+
+            if (homeLink) {
+                const path = window.location.pathname;
+                const isHomePage =
+                    path.endsWith("index.html") ||
+                    path === "/" ||
+                    path === "/AlejandroCampbellGameDesignPortfolio/";
+
+                homeLink.setAttribute("href", isHomePage ? "#hero" : "/AlejandroCampbellGameDesignPortfolio/index.html");
+            }
+
         })
         .catch(err => console.error(err));
 });
