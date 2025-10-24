@@ -255,5 +255,12 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+  /*
+  if (!('ontouchstart' in window)) {
+    document.documentElement.classList.add('no-touch');
+  }
+
+   */
+
 
 })();
