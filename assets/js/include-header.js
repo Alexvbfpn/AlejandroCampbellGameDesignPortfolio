@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             document.dispatchEvent(new Event("headerLoaded"))
 
+            // DYNAMIC HOME LINK
             const homeLink = document.getElementById("home-link");
 
             if (homeLink) {
@@ -41,6 +42,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 homeLink.setAttribute("href", isHomePage ? "#hero" : "/AlejandroCampbellGameDesignPortfolio/index.html");
             }
+
+            //#region DYNAMIC HEADER LINKS with ID
+            const path = window.location.pathname;
+            const isHomePage = path.endsWith("index.html") ||
+                path === "/" ||
+                path === "/AlejandroCampbellGameDesignPortfolio/";
+            /*
+            const sections = ["hero", "about", "resume", "portfolio", "skills"]
+
+            sections.forEach((id) =>
+            {
+                const link = document.getElementById(`${id}-link`);
+                if (link)
+                {
+                    const anchor = `#${id}`
+                    const fullLink = `/AlejandroCampbellGameDesignPortfolio/index.html${anchor}`;
+                    link.setAttribute("href", isHomePage ? anchor : fullLink);
+                }
+            });
+            */
+
+            //#endregion
+
+            //#region DYNAMIC HEADER LINKS with data-section (for decoupling id logic from links logic)
+
+            //const path = window.location.pathname; //We already have it above (We already have it up)
+            //const isHomePage = path.endsWith("index.html") ||
+            //                 path === "/" ||
+            //                 path === "/AlejandroCampbellGameDesignPortfolio/"; //We already have it above (We already have it up)
+
+            document.querySelectorAll('a[data-section]')
+                .forEach((link) => {
+
+                    const section = link.getAttribute("data-section");
+                    const anchor = `#${section}`;
+                    const fullLink = `/AlejandroCampbellGameDesignPortfolio/index.html${anchor}`;
+                    link.setAttribute("href", isHomePage ? anchor : fullLink);
+                });
+            //#endregion
 
         })
         .catch(err => console.error(err));
