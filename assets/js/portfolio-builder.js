@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${project.image}" alt="${project.title}">
             <div class="portfolio-info">
               <h4>${project.year}</h4>
+              <span class="studio">${project.studio}</span>
               <figcaption>
                 <h3>${project.title}</h3>
                 <span>${project.roles}</span>

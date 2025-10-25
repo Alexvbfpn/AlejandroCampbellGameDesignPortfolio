@@ -912,6 +912,19 @@ section,
   background-color: var(--accent-color);
 }
 
+/* ✅ Nuevo: Estudio */
+.portfolio .portfolio-content .portfolio-info .studio {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 13px;
+  padding: 5px 10px;
+  color: #ffffff;
+  background-color: rgba(230, 111, 105, 0.9); /* un tono relacionado */
+  border-radius: 3px;
+  font-weight: 400;
+}
+
 .portfolio .portfolio-content .portfolio-info p {
   position: absolute;
   bottom: 10px;
