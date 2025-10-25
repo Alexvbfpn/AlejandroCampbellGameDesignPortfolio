@@ -951,7 +951,7 @@ section,
 }
 
 .portfolio .portfolio-content:hover img {
-  transform: scale(1.1);
+  /*transform: scale(1.1);*/
 }
 
 /*--------------------------------------------------------------
@@ -995,11 +995,11 @@ section,
   padding: 0;
   color: #fff;
 }
-
+/*
 .port figcaption span:before {
   content: 'by ';
 }
-
+*/
 .port figcaption a {
   text-align: center;
   padding: 8px 15px;
@@ -1026,7 +1026,8 @@ section,
 }
 
 .cs-style-3 figcaption {
-  height: 100px;
+  position: absolute;
+/* height: 100px */
   width: 100%;
   top: auto;
   bottom: 0;
@@ -1038,6 +1039,57 @@ section,
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
   -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
   transition: transform 0.4s, opacity 0.1s 0.3s;
+
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* ✅ Grid layout que reserva sitio para el botón */
+  display: grid;
+  grid-template-columns: 1fr auto; /* texto + botón */
+  grid-template-rows: auto auto;   /* título + roles */
+  column-gap: 10px;
+  row-gap: 4px;
+  align-items: start;
+
+}
+
+/* .cs-style-3 figcaption (OLD)
+
+.cs-style-3 figcaption {
+height: 100px;
+width: 100%;
+top: auto;
+bottom: 0;
+opacity: 0;
+-webkit-transform: translateY(100%);
+-moz-transform: translateY(100%);
+-ms-transform: translateY(100%);
+transform: translateY(100%);
+-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+*/
+
+
+/* Esto antes no existia */
+.cs-style-3 figcaption h3 {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  margin: 0;
+  color: #fff;
+  word-wrap: break-word; /* ✅ hace que el texto largo salte de línea */
+}
+
+/* Esto antes no existia */
+.cs-style-3 figcaption span {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  color: #e66f69;
+  word-wrap: break-word;
 }
 
 .no-touch .cs-style-3 figure:hover figcaption,
@@ -1053,10 +1105,25 @@ section,
 }
 
 .cs-style-3 figcaption a {
-  position: absolute;
+
+  grid-column: 2 / 3;
+  grid-row: 1 / 3; /* ✅ ocupa las dos filas */
+  align-self: center;
+  justify-self: end;
+  padding: 8px 15px;
   bottom: 31px;
   right: 20px;
+  border-radius: 4px;
 }
+
+/* .cs-style-3 figcaption a (OLD)
+
+.cs-style-3 figcaption a {
+  position: absolute;
+  bottom: 31px;
+  right: 20px; }
+
+*/
 
 .button{
   background: transparent;
