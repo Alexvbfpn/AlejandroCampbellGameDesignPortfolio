@@ -77,7 +77,7 @@ const projects =
             studio: "Origaming Creations"
         },
         {
-            title: "Once Button A Time (OBAT)",
+            title: "Once Button A Time",
             year: 2024,
             roles: "Game Designer | Game Programmer | Producer",
             description: "OBAT: A 2.5D platformer game",
