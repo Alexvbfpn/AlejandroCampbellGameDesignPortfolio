@@ -1548,7 +1548,7 @@ transition: transform 0.4s, opacity 0.1s 0.3s;
 
 .find-me-text {
   font-size: 3em;
-
+  color: var(--heading-color);
   padding-bottom: 10px;
   border-bottom: 1px solid;
   max-width: 300px;
