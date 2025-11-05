@@ -1,0 +1,79 @@
+/* ================================================
+   🎨 Project Themes for Portfolio Details
+   (Use with class "project-theme-xxx" in <main>)
+================================================ */
+
+/* 🎨 Base Variables */
+.project-theme-default {
+    --accent-color: #149ddd;
+    --background-color: #ffffff;
+    --heading-color: #050d18;
+    --default-color: #272829;
+    --surface-color: #ffffff;
+}
+
+/* 🔥 Hermetica Theme */
+.project-theme-hermetica {
+    --accent-color: #e66f69;
+    --background-color: #1b1b1b;
+    --heading-color: #ffffff;
+    --default-color: #cccccc;
+    --surface-color: #262626;
+}
+
+/* 🧀 AlcheMice Theme */
+.project-theme-alchemice {
+    --accent-color: #d8b65d;
+    --background-color: #f9f5e9;
+    --heading-color: #2d2206;
+    --default-color: #3c2f07;
+    --surface-color: #ffffff;
+}
+
+/* 🪶 Mystic Theme */
+.project-theme-mystic {
+    --accent-color: #8e44ad;
+    --background-color: #faf7ff;
+    --heading-color: #2b1349;
+    --default-color: #4b3d5a;
+    --surface-color: #f3e7ff;
+}
+
+/* ===============================
+   🔧 Apply to Portfolio Section
+================================ */
+.project-theme-default,
+.project-theme-hermetica,
+.project-theme-alchemice,
+.project-theme-mystic {
+    background-color: var(--background-color);
+    color: var(--default-color);
+}
+
+.project-theme-default h1,
+.project-theme-hermetica h1,
+.project-theme-alchemice h1,
+.project-theme-mystic h1,
+.project-theme-default h2,
+.project-theme-hermetica h2,
+.project-theme-alchemice h2,
+.project-theme-mystic h2 {
+    color: var(--heading-color);
+}
+
+.project-theme-default a,
+.project-theme-hermetica a,
+.project-theme-alchemice a,
+.project-theme-mystic a {
+    color: var(--accent-color);
+}
+
+.project-theme-default .portfolio-info,
+.project-theme-hermetica .portfolio-info,
+.project-theme-alchemice .portfolio-info,
+.project-theme-mystic .portfolio-info {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
