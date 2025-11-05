@@ -1,0 +1,54 @@
+/* ===============================
+   📐 Layout & Functionality for Project Details
+================================ */
+.project-section {
+    padding: 60px 0;
+}
+
+.project-section .section-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    cursor: pointer;
+}
+
+.project-image-wrapper {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+}
+
+.project-info {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0 30px rgba(0,0,0,0.1);
+}
+
+.project-info .details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-info .details-list li {
+    margin-bottom: 10px;
+}
+
+.project-info .note {
+    font-size: 0.9rem;
+}
