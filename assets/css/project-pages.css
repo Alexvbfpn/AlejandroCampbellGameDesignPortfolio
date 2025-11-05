@@ -1,0 +1,104 @@
+/* ===============================
+   🎨 Paleta de colores base
+================================ */
+.project-page {
+    --color-bg: #f8f7f3;
+    --color-text: #333333;
+    --color-accent: #e63946;
+    --color-accent-light: #fff5f5;
+    --color-muted: #666666;
+    --color-card-bg: #f4f4f4;
+
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', sans-serif;
+    transition: background 0.4s, color 0.4s;
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* ===============================
+   🌈 Temas alternativos
+================================ */
+.project-page.theme-blue {
+    --color-accent: #0077b6;
+    --color-accent-light: #e0f3ff;
+    --color-bg: #f7fbff;
+}
+
+.project-page.theme-green {
+    --color-accent: #2a9d8f;
+    --color-accent-light: #dff8f3;
+    --color-bg: #f7fff9;
+}
+
+.project-page.theme-purple {
+    --color-accent: #8e44ad;
+    --color-accent-light: #f4e9fb;
+    --color-bg: #faf7ff;
+}
+
+/* ===============================
+   Componentes internos
+================================ */
+.project-page .section-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.project-page .custom-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    line-height: 1.7;
+}
+
+.project-page .accordion-button {
+    font-weight: 600;
+    background-color: var(--color-card-bg);
+}
+
+.project-page .accordion-button:not(.collapsed) {
+    color: var(--color-accent);
+    background-color: var(--color-accent-light);
+}
+
+.project-page .details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.project-page .note {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
+/* ===============================
+   Selector de temas
+================================ */
+.project-page .theme-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.project-page .theme-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-page .theme-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.project-page .btn-red { background-color: #e63946; }
+.project-page .btn-blue { background-color: #0077b6; }
+.project-page .btn-green { background-color: #2a9d8f; }
+.project-page .btn-purple { background-color: #8e44ad; }

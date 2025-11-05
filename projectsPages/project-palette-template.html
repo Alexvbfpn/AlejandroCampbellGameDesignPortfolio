@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project About – Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* ===============================
+       🎨 PALETA BASE (Tema por defecto)
+    =============================== */
+    :root {
+      --color-bg: #f8f7f3;
+      --color-text: #333333;
+      --color-accent: #e63946;
+      --color-accent-light: #fff5f5;
+      --color-muted: #666666;
+      --color-card-bg: #f4f4f4;
+    }
+
+    /* ===============================
+       🌈 OTROS TEMAS
+    =============================== */
+    .theme-blue {
+      --color-bg: #f7fbff;
+      --color-text: #222;
+      --color-accent: #0077b6;
+      --color-accent-light: #e0f3ff;
+      --color-muted: #555;
+      --color-card-bg: #ebf5ff;
+    }
+
+    .theme-green {
+      --color-bg: #f7fff9;
+      --color-text: #222;
+      --color-accent: #2a9d8f;
+      --color-accent-light: #dff8f3;
+      --color-muted: #555;
+      --color-card-bg: #e9f7f1;
+    }
+
+    .theme-purple {
+      --color-bg: #faf7ff;
+      --color-text: #222;
+      --color-accent: #8e44ad;
+      --color-accent-light: #f4e9fb;
+      --color-muted: #555;
+      --color-card-bg: #efe2f6;
+    }
+
+    /* ===============================
+       BASE STYLES
+    =============================== */
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: 'Inter', sans-serif;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    .section-title {
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      border-bottom: 3px solid var(--color-accent);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .custom-list {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .custom-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .accordion-button {
+      font-weight: 600;
+      background-color: var(--color-card-bg);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .accordion-button:not(.collapsed) {
+      color: var(--color-accent);
+      background-color: var(--color-accent-light);
+    }
+
+    .details-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .details-list li {
+      margin-bottom: 0.3rem;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+
+    /* ===============================
+       SELECTOR DE TEMAS
+    =============================== */
+    .theme-selector {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .theme-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    }
+
+    .btn-red { background-color: #e63946; }
+    .btn-blue { background-color: #0077b6; }
+    .btn-green { background-color: #2a9d8f; }
+    .btn-purple { background-color: #8e44ad; }
+
+  </style>
+</head>
+<body>
+
+<section class="project-section container py-5">
+
+  <!-- 🔘 THEME SELECTOR -->
+  <div class="theme-selector">
+    <div class="theme-btn btn-red" onclick="setTheme('')"
+         title="Red Theme"></div>
+    <div class="theme-btn btn-blue" onclick="setTheme('theme-blue')"
+         title="Blue Theme"></div>
+    <div class="theme-btn btn-green" onclick="setTheme('theme-green')"
+         title="Green Theme"></div>
+    <div class="theme-btn btn-purple" onclick="setTheme('theme-purple')"
+         title="Purple Theme"></div>
+  </div>
+
+  <!-- 🧠 MY CONTRIBUTIONS -->
+  <h2 class="section-title mb-4">MY CONTRIBUTIONS</h2>
+
+  <ul class="custom-list">
+    <li>Worked with <strong>Unreal Engine</strong> upgrading multiplayer systems.</li>
+    <li>Testing & Analytics.</li>
+    <li>Data gathering for <strong>weapon analytics</strong>: Spread, recoil, damage, bullet drop, etc.</li>
+    <li><strong>Test maps & tools:</strong> Shooting ranges, obstacle courses, etc.</li>
+    <li>Prototyped <strong>new map events</strong>.</li>
+    <li>Added <strong>new UI elements</strong> (Rewards screen, Lobby, Crosshair configuration).</li>
+    <li>Designed & implemented <strong>seven premium packs</strong>.</li>
+    <li><strong>Weapons & Items</strong> design + data-driven systems.</li>
+    <li><strong>Bug fixing & Optimization.</strong></li>
+  </ul>
+
+  <!-- 📂 ACCORDIONS -->
+  <div class="accordion my-4" id="projectAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          Weapons Design & Balance
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+        <div class="accordion-body">
+          Details about balancing weapons, testing spread, and tuning recoil systems.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          Premium Packs
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
+        <div class="accordion-body">
+          Overview of the seven premium packs and how they improved player engagement.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 🧾 PROJECT DETAILS -->
+  <h2 class="section-title mt-5 mb-3">PROJECT DETAILS</h2>
+  <ul class="details-list">
+    <li><strong>Studio:</strong> Bohemia Interactive</li>
+    <li><strong>Genre:</strong> Third Person Looter Shooter</li>
+    <li><strong>Platform:</strong> Xbox One/Series S & X, PlayStation 4/5, Nintendo Switch</li>
+  </ul>
+
+  <p class="note mt-3">
+    <em>Note:</em> The features and contributions displayed here are the ones that were already released or are free from NDAs.
+  </p>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // ===============================
+  // 🔄 THEME SWITCHER FUNCTION
+  // ===============================
+  function setTheme(theme) {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme); // Guarda preferencia
+  }
+
+  // Mantener el tema al recargar
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) document.body.className = savedTheme;
+</script>
+</body>
+</html>
