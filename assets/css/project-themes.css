@@ -1,47 +1,111 @@
 /* ================================================
    🎨 Project Themes for Portfolio Details
-   (Use with class "project-theme-xxx" in <main>)
+   (Use with class "project-theme xxx" in <main>)
 ================================================ */
 
-/* 🎨 Base Variables */
-.project-theme-default {
+/* ===============================================
+   BASE STYLES — comunes a todos los temas
+================================================ */
+.project-theme {
+    background-color: var(--background-color);
+    color: var(--default-color);
+    transition: background 0.4s, color 0.4s;
+}
+
+.project-theme h1,
+.project-theme h2 {
+    color: var(--heading-color);
+}
+
+.project-theme a {
+    color: var(--accent-color);
+}
+
+.project-theme .portfolio-info {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================================
+   🎨 THEMES — definen solo variables
+================================================ */
+/* 🎨 Default Theme */
+.project-theme.default {
     --accent-color: #149ddd;
     --background-color: #ffffff;
     --heading-color: #050d18;
     --default-color: #272829;
     --surface-color: #ffffff;
-}
 
+    --accent-color-light: #cce5ff;       /* tono claro para botón o título activo */
+    --card-bg-color: #f8f9fa;           /* fondo claro de tarjetas/accordions */
+}
 /* 🔥 Hermetica Theme */
-.project-theme-hermetica {
+.project-theme.hermetica {
     --accent-color: #e66f69;
     --background-color: #1b1b1b;
     --heading-color: #ffffff;
     --default-color: #cccccc;
     --surface-color: #262626;
+
+    --accent-color-light: #f28b85;       /* tono claro para botón o título activo */
+    --card-bg-color: #1f1f1f;           /* fondo de tarjetas más oscuro */
 }
 
 /* 🧀 AlcheMice Theme */
-.project-theme-alchemice {
+.project-theme.alchemice {
     --accent-color: #d8b65d;
     --background-color: #f9f5e9;
     --heading-color: #2d2206;
     --default-color: #3c2f07;
     --surface-color: #ffffff;
+
+    --accent-color-light: #f7e29b;      /* tono claro para resaltar */
+    --card-bg-color: #fff8e1;           /* fondo cálido para tarjetas */
 }
 
 /* 🪶 Mystic Theme */
-.project-theme-mystic {
+.project-theme.mystic {
     --accent-color: #8e44ad;
     --background-color: #faf7ff;
     --heading-color: #2b1349;
     --default-color: #4b3d5a;
     --surface-color: #f3e7ff;
+
+    --accent-color-light: #cfa0ff;      /* tono liláceo claro para activo */
+    --card-bg-color: #f3e7ff;           /* fondo suave de tarjetas */
+}
+
+
+
+/* ===============================================
+   🎨 ACCORDIONS — adaptados a cada tema
+================================================ */
+
+.project-theme .accordion-button {
+    background-color: var(--card-bg-color);
+    color: var(--default-color);
+    transition: background 0.4s, color 0.4s;
+    font-weight: 600;
+}
+
+.project-theme .accordion-button:not(.collapsed) {
+    background-color: var(--accent-color-light);
+    color: var(--accent-color);
+}
+
+.project-theme .accordion-body {
+    /* background-color: var(--card-bg-color);
+    color: var(--default-color); */
 }
 
 /* ===============================
    🔧 Apply to Portfolio Section
 ================================ */
+/*
 .project-theme-default,
 .project-theme-hermetica,
 .project-theme-alchemice,
@@ -75,5 +139,8 @@
     background-color: var(--surface-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
+
+ */
