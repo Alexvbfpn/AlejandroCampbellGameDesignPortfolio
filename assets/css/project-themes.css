@@ -78,7 +78,17 @@
     --accent-color-light: #cfa0ff;      /* tono liláceo claro para activo */
     --card-bg-color: #f3e7ff;           /* fondo suave de tarjetas */
 }
+/* 🐑 Lullaby Theme */
+.project-theme.lullaby {
+    --accent-color: #8e44ad;
+    --background-color: #faf7ff;
+    --heading-color: #2b1349;
+    --default-color: #4b3d5a;
+    --surface-color: #f3e7ff;
 
+    --accent-color-light: #f4e9fb;     /* tono liláceo claro para activo */
+    --card-bg-color: #f3e7ff;           /* fondo suave de tarjetas */
+}
 
 
 /* ===============================================
