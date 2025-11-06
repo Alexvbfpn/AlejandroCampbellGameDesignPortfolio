@@ -21,6 +21,19 @@
     color: var(--accent-color);
 }
 
+.project-theme .portfolio-details .portfolio-details-slider img {
+    width: 100%;
+    border-radius: 3px;
+}
+
+.project-theme .portfolio-info {
+    background-color: var(--surface-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+}
+
 .project-theme .portfolio-info {
     background-color: var(--surface-color);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -46,6 +59,8 @@
     --gradient-bright-color: #00c6ff;
     --gradient-darker-color: #0072ff;
 
+    --glow-color: #0072ff;
+
 }
 /* 🔥 Hermetica Theme */
 .project-theme.hermetica {
@@ -57,6 +72,8 @@
 
     --accent-color-light: #f28b85;       /* tono claro para botón o título activo */
     --card-bg-color: #1f1f1f;           /* fondo de tarjetas más oscuro */
+
+
 }
 
 /* 🧀 AlcheMice Theme */
