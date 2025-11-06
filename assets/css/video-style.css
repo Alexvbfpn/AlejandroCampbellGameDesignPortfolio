@@ -68,6 +68,11 @@
 
 }
 
+/* Hover: escala solo el contenido */
+.video-frame:hover .video-wrapper:not(:focus-within) {
+    transform: scale(1.02);
+}
+
 /* 💫 Glow animado mejorado */
 .video-frame::before {
     content: '';
@@ -82,11 +87,6 @@
     opacity: 0.3;
     filter: blur(16px);
     animation: glow 3s ease-in-out infinite;
-}
-
-/* Hover: escala solo el contenido */
-.video-frame:hover .video-wrapper {
-    transform: scale(1.02);
 }
 
 
