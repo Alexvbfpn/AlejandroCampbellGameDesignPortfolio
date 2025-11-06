@@ -42,6 +42,10 @@
 
     --accent-color-light: #cce5ff;       /* tono claro para botón o título activo */
     --card-bg-color: #f8f9fa;           /* fondo claro de tarjetas/accordions */
+
+    --gradient-bright-color: #00c6ff;
+    --gradient-darker-color: #0072ff;
+
 }
 /* 🔥 Hermetica Theme */
 .project-theme.hermetica {
