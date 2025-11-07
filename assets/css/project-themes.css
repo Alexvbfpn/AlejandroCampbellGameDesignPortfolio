@@ -45,6 +45,7 @@
 /* ===============================================
    🎨 THEMES — definen solo variables
 ================================================ */
+
 /* 🎨 Default Theme */
 .project-theme.default {
     --accent-color: #149ddd;
@@ -52,6 +53,8 @@
     --heading-color: #050d18;
     --default-color: #272829;
     --surface-color: #ffffff;
+
+    --header-bg-color: #33457a;
 
     --accent-color-light: #cce5ff;       /* tono claro para botón o título activo */
     --card-bg-color: #f8f9fa;           /* fondo claro de tarjetas/accordions */
@@ -62,53 +65,283 @@
     --glow-color: #0072ff;
 
 }
+
 /* 🔥 Hermetica Theme */
 .project-theme.hermetica {
+    --accent-text-color: #f2e9e4;
     --accent-color: #e66f69;
     --background-color: #1b1b1b;
-    --heading-color: #ffffff;
-    --default-color: #cccccc;
+    --heading-color: #f2e9e4;
+    --default-color: #c8bfb8;
     --surface-color: #262626;
 
-    --accent-color-light: #f28b85;       /* tono claro para botón o título activo */
-    --card-bg-color: #1f1f1f;           /* fondo de tarjetas más oscuro */
+    --accent-color-light: #f28b85;
+    --card-bg-color: #1f1f1f;
+    --header-bg-color: #3a1f1e;
 
+    --gradient-bright-color: #ff9a8b;
+    --gradient-darker-color: #c23b22;
 
+    --glow-color: #ff9a8b;
 }
 
-/* 🧀 AlcheMice Theme */
+/* 🔥 Hermetica Theme (portada-inspirada) */
+.project-theme.hermetica2 {
+    --accent-text-color: #F4E9DD;
+    --accent-color: #C72E2A;
+    --background-color: #1A1714;
+    --heading-color: #F4E9DD;
+    --default-color: #8F8A86;
+    --surface-color: #2C2826;
+
+    --accent-color-light: #D9A441;
+    --card-bg-color: #3B3432;   /* un poco más claro que surface para tarjetas */
+    --header-bg-color: #3F2F2D;
+
+    --gradient-bright-color: #FF645D;
+    --gradient-darker-color: #8F201C;
+
+    --glow-color: #FF645D;
+}
+
+/* 🔥 Hermetica Theme (versión clara alquímica) */
+.project-theme.hermetica3 {
+    --accent-text-color: #3A2A1E;
+    --accent-color: #C72E2A;
+    --background-color: #F8F4ED;
+    --heading-color: #3A2A1E;
+    --default-color: #5C4B3E;
+    --surface-color: #F1E7D9;
+
+    --accent-color-light: #D9A441;
+    --card-bg-color: #FAF6EF;
+    --header-bg-color: #EAD8B2;
+
+    --gradient-bright-color: #FF645D;
+    --gradient-darker-color: #B93125;
+
+    --glow-color: #FF645D;
+}
+
+
+/* 🧪 Alche Mice — Opción A: Equilibrada */
 .project-theme.alchemice {
-    --accent-color: #d8b65d;
-    --background-color: #f9f5e9;
-    --heading-color: #2d2206;
-    --default-color: #3c2f07;
-    --surface-color: #ffffff;
+    --accent-text-color: #FFF9EC;
+    --accent-color: #F47C1E;       /* naranja principal */
+    --background-color: #0B0F1A;   /* fondo oscuro base (azul-violáceo) */
+    --heading-color: #FFF9EC;
+    --default-color: #C8CDD8;
 
-    --accent-color-light: #f7e29b;      /* tono claro para resaltar */
-    --card-bg-color: #fff8e1;           /* fondo cálido para tarjetas */
+    /* SURFACE ahora es claramente más claro que el fondo (mejor contraste) */
+    --surface-color: #202837;      /* -> diferencia visual clara frente a background */
+
+    --accent-color-light: #6CD070; /* verde suave */
+    --card-bg-color: #232B40;
+    /* HEADER nuevo: oscuro con un matiz azul profundo y calidez sutil */
+    --header-bg-color: #162233;    /* sustituto elegante, menos chocante */
+
+    --gradient-bright-color: #6CD070;
+    --gradient-darker-color: #F47C1E;
+    --glow-color: #6CD070;
 }
 
-/* 🪶 Mystic Theme */
-.project-theme.mystic {
-    --accent-color: #8e44ad;
-    --background-color: #faf7ff;
-    --heading-color: #2b1349;
-    --default-color: #4b3d5a;
-    --surface-color: #f3e7ff;
-
-    --accent-color-light: #cfa0ff;      /* tono liláceo claro para activo */
-    --card-bg-color: #f3e7ff;           /* fondo suave de tarjetas */
-}
 /* 🐑 Lullaby Theme */
 .project-theme.lullaby {
+    --accent-text-color: #8e44ad;
     --accent-color: #8e44ad;
     --background-color: #faf7ff;
     --heading-color: #2b1349;
     --default-color: #4b3d5a;
     --surface-color: #f3e7ff;
 
-    --accent-color-light: #f4e9fb;     /* tono liláceo claro para activo */
-    --card-bg-color: #f3e7ff;           /* fondo suave de tarjetas */
+    --accent-color-light: #cfa0ff;
+    --card-bg-color: #f3e7ff;;
+    --header-bg-color: #cab9e4;
+
+    --gradient-bright-color: #b89cff;
+    --gradient-darker-color: #7a5ea8;
+
+    --glow-color: #a47de0;
+}
+
+/* ☂️ Lady Umbrella Theme */
+.project-theme.ladyumbrella {
+    --accent-text-color: #f4f1f7;
+    --accent-color: #b83b5e;
+    --background-color: #12121f;
+    --heading-color: #f4f1f7;
+    --default-color: #b3a9c4;
+    --surface-color: #1e1e2f;
+
+    --accent-color-light: #d76385;
+    --card-bg-color: #1a1a2b;
+    --header-bg-color: #322437;
+
+    --gradient-bright-color: #ff6fae;
+    --gradient-darker-color: #862849;
+
+    --glow-color: #ff6fae;
+}
+
+/* 🌌 Aether Theme */
+.project-theme.aether {
+    --accent-text-color: #ffffff;
+    --accent-color: #4fc3f7;
+    --background-color: #0b0c1a;
+    --heading-color: #e3f2fd;
+    --default-color: #b0bec5;
+    --surface-color: #16182a;
+
+    --accent-color-light: #81d4fa;
+    --card-bg-color: #1b1f33;
+    --header-bg-color: #102041;
+
+    --gradient-bright-color: #29b6f6;
+    --gradient-darker-color: #1565c0;
+
+    --glow-color: #64b5f6;
+}
+
+/* 🕯 Sepia Noir Theme */
+.project-theme.noir {
+    --accent-text-color: #1e1b17;
+    --accent-color: #d4a373;
+    --background-color: #1e1b17;
+    --heading-color: #fff4e6;
+    --default-color: #cfc3af;
+    --surface-color: #2c2620;
+
+    --accent-color-light: #e8cfa7;
+    --card-bg-color: #332d26;
+    --header-bg-color: #3c322a;
+
+    --gradient-bright-color: #e8cfa7;
+    --gradient-darker-color: #a37544;
+
+    --glow-color: #d4a373;
+}
+
+/* 🧊 Glacier Theme */
+.project-theme.glacier {
+    --accent-text-color: #326c85;
+    --accent-color: #5bc0eb;
+    --background-color: #f8fbfd;
+    --heading-color: #073b4c;
+    --default-color: #22404d;
+    --surface-color: #ffffff;
+
+    --accent-color-light: #cbe9f6;
+    --card-bg-color: #f1faff;
+    --header-bg-color: #1e5a73;
+
+    --gradient-bright-color: #89d6f6;
+    --gradient-darker-color: #1976a5;
+
+    --glow-color: #5bc0eb;
+}
+
+/* 🔮 Ember Theme */
+.project-theme.ember {
+    --accent-text-color: #1c0f0a;
+    --accent-color: #ff7043;
+    --background-color: #1c0f0a;
+    --heading-color: #ffe0b2;
+    --default-color: #ffccbc;
+    --surface-color: #2a1812;
+
+    --accent-color-light: #ffab91;
+    --card-bg-color: #3a2018;
+    --header-bg-color: #4a2515;
+
+    --gradient-bright-color: #ffab91;
+    --gradient-darker-color: #bf360c;
+
+    --glow-color: #ff7043;
+}
+
+
+/* ===============================================
+   ⚔️ Aegis Theme — tonos azul acero, elegantes y técnicos
+================================================ */
+.project-theme.aegis {
+    --accent-color: #4da3ff;
+    --background-color: #0d1117;
+    --heading-color: #e6edf3;
+    --default-color: #c9d1d9;
+    --surface-color: #161b22;
+
+    --accent-color-light: #a3d4ff;
+    --card-bg-color: #1c2128;
+
+    --header-bg-color: #0d2847;
+
+    --gradient-bright-color: #4da3ff;
+    --gradient-darker-color: #003366;
+
+    --glow-color: #4da3ff;
+}
+
+/* ===============================================
+   🌿 Verdantia Theme — orgánico y natural, ideal para proyectos eco o relajados
+================================================ */
+.project-theme.verdantia {
+    --accent-color: #6fbf73;
+    --background-color: #f6fbf7;
+    --heading-color: #1e392a;
+    --default-color: #355e3b;
+    --surface-color: #ffffff;
+
+    --accent-color-light: #b8e0bc;
+    --card-bg-color: #eef8ef;
+
+    --header-bg-color: #3a6b48;
+
+    --gradient-bright-color: #8ae398;
+    --gradient-darker-color: #4a8b5b;
+
+    --glow-color: #6fbf73;
+}
+
+/* ===============================================
+   ☀️ Solstice Theme — cálido y aventurero, para proyectos de exploración
+================================================ */
+.project-theme.solstice {
+    --accent-color: #ff914d;
+    --background-color: #fff6ec;
+    --heading-color: #3b1d00;
+    --default-color: #5a3520;
+    --surface-color: #ffffff;
+
+    --accent-color-light: #ffd5b3;
+    --card-bg-color: #fff0e0;
+
+    --header-bg-color: #cc6a2b;
+
+    --gradient-bright-color: #ffb347;
+    --gradient-darker-color: #ff6b00;
+
+    --glow-color: #ff914d;
+}
+
+/* ===============================================
+   🔮 Obsidian Theme — oscuro, misterioso y elegante
+================================================ */
+.project-theme.obsidian {
+    --accent-color: #9c27b0;
+    --background-color: #0a0a0a;
+    --heading-color: #ffffff;
+    --default-color: #cfcfcf;
+    --surface-color: #1a1a1a;
+
+    --accent-color-light: #e1b5f0;
+    --card-bg-color: #141414;
+
+    --header-bg-color: #3c005a;
+
+    --gradient-bright-color: #b347ff;
+    --gradient-darker-color: #4a0072;
+
+    --glow-color: #9c27b0;
 }
 
 
@@ -125,7 +358,7 @@
 
 .project-theme .accordion-button:not(.collapsed) {
     background-color: var(--accent-color-light);
-    color: var(--accent-color);
+    color: var(--accent-text-color);
 }
 
 .project-theme .accordion-body {
