@@ -1,4 +1,103 @@
 /* ===============================
+   🖌️ Style for Header
+================================ */
+
+/* ===============================
+   Divider intercambiable — FIXED
+   (sin rotate, sombra SOBRE la cabecera)
+================================ */
+/* ===============================
+   🌊 Divider con sombra bajo el divisor y sobre la cabecera
+================================ */
+
+/* ===============================
+   🌊 Divider con sombra moldeada (realista)
+================================ */
+
+.project-header {
+    position: relative;
+    overflow: visible;
+    background-color: var(--header-bg-color);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .project-header .header-content {
+        padding-bottom: 250px;
+    }
+}
+
+.project-header .header-content {
+    padding-bottom: 100px; /* o lo que necesite para separarse del divisor */
+}
+
+/* ===============================
+   Sombra realista del divisor
+   — uniforme lateralmente, siguiendo la silueta
+================================ */
+
+.section-divider-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    pointer-events: none;
+    z-index: 2; /* entre header y cuerpo */
+}
+
+.section-divider-shadow,
+.section-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    -webkit-mask-position: bottom center;
+    mask-position: bottom center;
+}
+
+/* sombra */
+.section-divider-shadow {
+    background: color-mix(in srgb, var(--header-bg-color) 60%, black);
+    -webkit-mask-image: var(--divider-shape);
+    mask-image: var(--divider-shape);
+    filter: blur(8px);
+    opacity: 0.4;
+    transform: translateY(-12px);
+}
+
+/* divisor visible */
+.section-divider {
+    background: var(--background-color);
+    -webkit-mask-image: var(--divider-shape);
+    mask-image: var(--divider-shape);
+    z-index: 3;
+}
+
+/* Variantes (ambas usan la misma máscara para sombra y divisor) */
+.divider-wave {
+    --divider-shape: url("../img/dividers/wave.svg");
+    -webkit-mask-image: var(--divider-shape);
+    mask-image: var(--divider-shape);
+}
+.divider-zigzag {
+    --divider-shape: url("../img/dividers/zigzag.svg");
+    -webkit-mask-image: var(--divider-shape);
+    mask-image: var(--divider-shape);
+}
+.divider-mountain {
+    --divider-shape: url("../img/dividers/mountain.svg");
+    -webkit-mask-image: var(--divider-shape);
+    mask-image: var(--divider-shape);
+}
+
+
+/* ===============================
    📐 Layout & Functionality for Project Details
 ================================ */
 .project-section {
@@ -23,7 +122,7 @@
 }
 
 .project-container {
-    border-top: 10px solid ;
+    /*border-top: 10px solid ;*/
 
 }
 
