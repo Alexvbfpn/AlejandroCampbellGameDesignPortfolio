@@ -156,3 +156,123 @@
 .project-info .note {
     font-size: 0.9rem;
 }
+
+/* ===============================
+   Custom Lists
+================================ */
+
+/* === BASE GLOBAL PARA TODAS LAS CUSTOM LISTS === */
+/*
+ul.custom-project-list {
+    list-style: none;
+    margin: 1em 0;
+    padding-left: 1.8em;
+}
+
+ul.custom-project-list li {
+    position: relative;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+*/
+/* Ícono genérico: posición y comportamiento */
+/*
+ul.custom-list li::before {
+    content: '';
+    position: absolute;
+    left: -1.5em;
+    top: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+}
+*/
+/* === VARIANTES ESPECÍFICAS === */ /*
+ul.custom-list.icon-cheese li::before {
+    content: '🧀';
+}
+
+ul.custom-cheese li::before
+{
+    content: '🧀';
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+*/
+
+/* === BASE GLOBAL === */
+ul.custom-project-list {
+    list-style: none;
+    margin: 1em 0;
+    padding-left: 2.05em; /* Mantiene el indentado típico */
+}
+
+ul.custom-project-list li {
+    position: relative;
+    margin-bottom: 0.6em;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* === Pseudo-elemento para ícono === */
+ul.custom-project-list li::before {
+    content: var(--list-icon, ''); /* Por defecto usa emoji */
+    position: absolute;
+    left: -1.75em; /* ECHALE UN OJO A ESTO CUANDO VUELVAS QUE PUEDE QUEDAR BIEN SEPARARLO MÁS (AUNQUE HABRÁ QUE TOCAR EL INDENTADO) */
+    top: 0.1em;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.95;
+}
+
+/* Si es tipo imagen, usa el background */
+ul.custom-project-list[data-icon-type="image"] li::before {
+    content: '';
+    background-image: var(--list-image);
+}
+
+/* === VARIANTES === */
+
+/* 🧀 Imagen (quesito) */
+ul.custom-project-list.icon-cheese {
+    --list-image: url('../img/icons/cheeseIconDuo.png');
+}
+
+/* ☂️ Imagen (paraguas) */
+ul.custom-project-list.icon-umbrella {
+    --list-image: url('../assets/icons/umbrella.png');
+}
+
+/* ⚗️ Imagen (poción) */
+ul.custom-project-list.icon-potion {
+    --list-image: url('../assets/icons/potion.png');
+}
+
+/* ⭐ Emoji (estrella) */
+ul.custom-project-list.emoji-star { --list-icon: '⭐'; }
+
+/* 🧀 Emoji (quesito) */
+ul.custom-project-list.emoji-cheese { --list-icon: '🧀'; }
+
+/* Opcional: animación sutil */
+/*
+ul.custom-project-list li:hover::before {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-out, filter 0.1s ease-out;
+    filter: brightness(1.2);
+}
+*/
