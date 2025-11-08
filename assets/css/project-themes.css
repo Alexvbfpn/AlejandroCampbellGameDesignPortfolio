@@ -124,25 +124,26 @@
 }
 
 
-/* 🧪 Alche Mice — Opción A: Equilibrada */
+/* 🧪 Alche Mice Theme — versión cálida definitiva */
 .project-theme.alchemice {
-    --accent-text-color: #FFF9EC;
-    --accent-color: #F47C1E;       /* naranja principal */
-    --background-color: #0B0F1A;   /* fondo oscuro base (azul-violáceo) */
-    --heading-color: #FFF9EC;
-    --default-color: #C8CDD8;
+    --accent-text-color: #FFF9EF;          /* blanco cálido */
+    --accent-color: #F47C1E;               /* naranja principal */
+    --background-color: #0A0C18;           /* azul-negro profundo */
+    --heading-color: #FFF9EF;
+    --default-color: #D3D6E0;              /* gris-azulado claro */
+    --surface-color: #21283A;              /* más claro que fondo → contraste */
+    --card-bg-color: #2B344A;              /* paneles contrastados */
 
-    /* SURFACE ahora es claramente más claro que el fondo (mejor contraste) */
-    --surface-color: #202837;      /* -> diferencia visual clara frente a background */
+    /* Tonos de luz y brillo sin verde: dorado cálido y ámbar */
+    --accent-color-light: #F47C1E;           /* dorado-miel para efectos mágicos */
 
-    --accent-color-light: #6CD070; /* verde suave */
-    --card-bg-color: #232B40;
-    /* HEADER nuevo: oscuro con un matiz azul profundo y calidez sutil */
-    --header-bg-color: #162233;    /* sustituto elegante, menos chocante */
+    /* 🔸 OPCIÓN 1 (por defecto): Cobre oscuro cálido */
+    --header-bg-color: #3A1B2A;    /* da personalidad, encaja con naranja sin saturar */
 
-    --gradient-bright-color: #6CD070;
-    --gradient-darker-color: #F47C1E;
-    --glow-color: #6CD070;
+    --gradient-bright-color: #FFC861;      /* dorado brillante */
+    --gradient-darker-color: #F47C1E;      /* naranja fuego */
+
+    --glow-color: #FFC861;                 /* brillo dorado-mágico */
 }
 
 /* 🐑 Lullaby Theme */
