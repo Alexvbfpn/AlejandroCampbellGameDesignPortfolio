@@ -240,7 +240,7 @@ ul.custom-project-list li::before {
 }
 
 /* Si es tipo imagen, usa el background */
-ul.custom-project-list[data-icon-type="image"] li::before {
+ul.custom-project-list[data-icon-type="image"] li::before { /* ul.custom-project-list[style*="--icon-type: image"] li::before { */
     content: '';
     background-image: var(--list-image);
 }
