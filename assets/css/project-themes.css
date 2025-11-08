@@ -63,7 +63,7 @@
     --gradient-darker-color: #0072ff;
 
     --glow-color: #0072ff;
-
+    --list-icon: '•';
 }
 
 /* 🔥 Hermetica Theme */
@@ -83,6 +83,8 @@
     --gradient-darker-color: #c23b22;
 
     --glow-color: #ff9a8b;
+    /* ICONO POR TEMA */
+    --list-icon: '🧪';
 }
 
 /* 🔥 Hermetica Theme (portada-inspirada) */
@@ -102,6 +104,9 @@
     --gradient-darker-color: #8F201C;
 
     --glow-color: #FF645D;
+
+    /* ICONO POR TEMA */
+    --list-icon: '🧪';
 }
 
 /* 🔥 Hermetica Theme (versión clara alquímica) */
@@ -121,6 +126,10 @@
     --gradient-darker-color: #B93125;
 
     --glow-color: #FF645D;
+
+    /* 🧪 Nuevo: icono por tema */
+    --list-icon: '⚗';
+    --list-image: url('../img/icons/potion.png');
 }
 
 
@@ -137,13 +146,17 @@
     /* Tonos de luz y brillo sin verde: dorado cálido y ámbar */
     --accent-color-light: #F47C1E;           /* dorado-miel para efectos mágicos */
 
-    /* 🔸 OPCIÓN 1 (por defecto): Cobre oscuro cálido */
+    /* 🔸 Cobre oscuro cálido */
     --header-bg-color: #3A1B2A;    /* da personalidad, encaja con naranja sin saturar */
 
     --gradient-bright-color: #FFC861;      /* dorado brillante */
     --gradient-darker-color: #F47C1E;      /* naranja fuego */
 
     --glow-color: #FFC861;                 /* brillo dorado-mágico */
+
+    /* ICONO POR TEMA */
+    --list-icon: '🧀';
+    --list-image: url('../img/icons/cheeseIconDuo.png');
 }
 
 /* 🐑 Lullaby Theme */
@@ -163,6 +176,9 @@
     --gradient-darker-color: #7a5ea8;
 
     --glow-color: #a47de0;
+
+    /* ICONO POR TEMA */
+    --list-icon: '🎵';
 }
 
 /* ☂️ Lady Umbrella Theme */
@@ -182,6 +198,9 @@
     --gradient-darker-color: #862849;
 
     --glow-color: #ff6fae;
+
+    /* ICONO POR TEMA */
+    --list-icon: '☂';
 }
 
 /* 🌌 Aether Theme */
@@ -201,6 +220,9 @@
     --gradient-darker-color: #1565c0;
 
     --glow-color: #64b5f6;
+
+    /* ICONO POR TEMA */
+    --list-icon: '⭐';
 }
 
 /* 🕯 Sepia Noir Theme */
@@ -220,6 +242,9 @@
     --gradient-darker-color: #a37544;
 
     --glow-color: #d4a373;
+
+    /* ICONO POR TEMA */
+    --list-icon: '🕯️';
 }
 
 /* 🧊 Glacier Theme */
@@ -239,6 +264,9 @@
     --gradient-darker-color: #1976a5;
 
     --glow-color: #5bc0eb;
+
+    /* ICONO POR TEMA */
+    --list-icon: '❄';
 }
 
 /* 🔮 Ember Theme */
@@ -258,6 +286,9 @@
     --gradient-darker-color: #bf360c;
 
     --glow-color: #ff7043;
+
+    /* ICONO POR TEMA */
+    --list-icon: '🔮';
 }
 
 
@@ -280,6 +311,9 @@
     --gradient-darker-color: #003366;
 
     --glow-color: #4da3ff;
+
+    /* ICONO POR TEMA */
+    --list-icon: '🛡️';
 }
 
 /* ===============================================
@@ -301,6 +335,9 @@
     --gradient-darker-color: #4a8b5b;
 
     --glow-color: #6fbf73;
+
+    /* ICONO POR TEMA */
+    --list-icon: '🍃';
 }
 
 /* ===============================================
@@ -322,6 +359,9 @@
     --gradient-darker-color: #ff6b00;
 
     --glow-color: #ff914d;
+
+    /* ICONO POR TEMA */
+    --list-icon: '☀️';
 }
 
 /* ===============================================
@@ -343,6 +383,9 @@
     --gradient-darker-color: #4a0072;
 
     --glow-color: #9c27b0;
+
+    /* ICONO POR TEMA */
+    --list-icon: '💎';
 }
 
 
@@ -409,3 +452,4 @@
 }
 
  */
+

@@ -245,28 +245,15 @@ ul.custom-project-list[data-icon-type="image"] li::before {
     background-image: var(--list-image);
 }
 
-/* === VARIANTES === */
-
-/* 🧀 Imagen (quesito) */
-ul.custom-project-list.icon-cheese {
-    --list-image: url('../img/icons/cheeseIconDuo.png');
+/* PARA EL DEFAULT ANULAMOS (De momento) */
+.project-theme.default ul.custom-project-list {
+    list-style: disc;
 }
 
-/* ☂️ Imagen (paraguas) */
-ul.custom-project-list.icon-umbrella {
-    --list-image: url('../assets/icons/umbrella.png');
+.project-theme.default ul.custom-project-list li::before
+{
+    content: '';
 }
-
-/* ⚗️ Imagen (poción) */
-ul.custom-project-list.icon-potion {
-    --list-image: url('../assets/icons/potion.png');
-}
-
-/* ⭐ Emoji (estrella) */
-ul.custom-project-list.emoji-star { --list-icon: '⭐'; }
-
-/* 🧀 Emoji (quesito) */
-ul.custom-project-list.emoji-cheese { --list-icon: '🧀'; }
 
 /* Opcional: animación sutil */
 /*
@@ -276,3 +263,4 @@ ul.custom-project-list li:hover::before {
     filter: brightness(1.2);
 }
 */
+
