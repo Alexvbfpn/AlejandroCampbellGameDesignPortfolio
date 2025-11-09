@@ -2,17 +2,7 @@
    🖌️ Style for Header
 ================================ */
 
-/* ===============================
-   Divider intercambiable — FIXED
-   (sin rotate, sombra SOBRE la cabecera)
-================================ */
-/* ===============================
-   🌊 Divider con sombra bajo el divisor y sobre la cabecera
-================================ */
 
-/* ===============================
-   🌊 Divider con sombra moldeada (realista)
-================================ */
 :root {
     --divider-height: 150px;
 }
@@ -37,6 +27,10 @@
 /* ===============================
    Sombra realista del divisor
    — uniforme lateralmente, siguiendo la silueta
+================================ */
+
+/* ===============================
+   🌊 Divider con sombra bajo el divisor y sobre la cabecera
 ================================ */
 
 .section-divider-wrapper {
