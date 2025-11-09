@@ -13,6 +13,9 @@
 /* ===============================
    🌊 Divider con sombra moldeada (realista)
 ================================ */
+:root {
+    --divider-height: 150px;
+}
 
 .project-header {
     position: relative;
@@ -28,7 +31,7 @@
 }
 
 .project-header .header-content {
-    padding-bottom: 100px; /* o lo que necesite para separarse del divisor */
+    padding-bottom: calc(var(--divider-height) * 0.7)
 }
 
 /* ===============================
@@ -41,7 +44,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px;
+    height: var(--divider-height);
     pointer-events: none;
     z-index: 2; /* entre header y cuerpo */
 }
