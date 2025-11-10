@@ -7,32 +7,46 @@
     --divider-height: 150px;
 }
 
-.project-header {
-    position: relative;
-    overflow: visible;
+
+
+/* 1️⃣ Fijamos la cabecera visualmente */ /* Para el Parallax */
+.project-header-container {
+    position: sticky;
+    overflow: hidden;
     background-color: var(--header-bg-color);
-    z-index: 1;
+    top: 0;
+    z-index: 0;
+}
+
+/* 2️⃣ Contenido de la cabecera centrado y cubierto */
+.project-header-container .header-content {
+    padding-bottom: calc(var(--divider-height) * 0.7);
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
-    .project-header .header-content {
+    .project-header-container .header-content {
         padding-bottom: 250px;
     }
 }
 
-.project-header .header-content {
-    padding-bottom: calc(var(--divider-height) * 0.7)
-}
+/* 4️⃣ El contenedor del cuerpo "sube por encima" */
+.project-body-container {
+    /*z-index: 20;*/
+    /*padding-top: calc(var(--divider-height, 150px) * 0.7);*/
+    /*border-top: 10px solid ;*/
+    position: relative;
+    z-index: 4;
+    background-color: var(--background-color);
+    transform: translateY(0);
 
-/* ===============================
-   Sombra realista del divisor
-   — uniforme lateralmente, siguiendo la silueta
-================================ */
+}
 
 /* ===============================
    🌊 Divider con sombra bajo el divisor y sobre la cabecera
 ================================ */
-
+/*
 .section-divider-wrapper {
     position: absolute;
     bottom: 0;
@@ -40,13 +54,21 @@
     width: 100%;
     height: var(--divider-height);
     pointer-events: none;
-    z-index: 2; /* entre header y cuerpo */
+    z-index: 3; /* entre header y cuerpo *//*/*
+}
+*/
+.section-divider-wrapper {
+    position: relative; /* cambia de absolute a relative */
+    width: 100%;
+    height: var(--divider-height, 50px);
+    margin-top: calc(var(--divider-height, 150px) * -1); /* lo empuja hacia arriba */
+    z-index: 3; /* encima del header */
 }
 
 .section-divider-shadow,
 .section-divider {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -56,6 +78,8 @@
     mask-size: cover;
     -webkit-mask-position: bottom center;
     mask-position: bottom center;
+    pointer-events: none;
+
 }
 
 /* sombra */
@@ -66,6 +90,7 @@
     filter: blur(8px);
     opacity: 0.4;
     transform: translateY(-12px);
+    z-index: 2;
 }
 
 /* divisor visible */
@@ -73,6 +98,8 @@
     background: var(--background-color);
     -webkit-mask-image: var(--divider-shape);
     mask-image: var(--divider-shape);
+    background-blend-mode: normal;
+    transform: translateY(2px); /* 🔧 empuja un pelín hacia abajo */
     z-index: 3;
 }
 
@@ -116,11 +143,6 @@
 
 .accordion-button {
     cursor: pointer;
-}
-
-.project-container {
-    /*border-top: 10px solid ;*/
-
 }
 
 .project-image-wrapper {
@@ -259,5 +281,25 @@ ul.custom-project-list li:hover::before {
     transition: transform 0.1s ease-out, filter 0.1s ease-out;
     filter: brightness(1.2);
 }
-*/
+ */
+
+/* ===================================================
+   🌀 Scroll reveal effect (header eaten by body)
+=================================================== */
+
+/* 5️⃣ Efecto de “comerse” al scrollear */
+/*
+@supports (animation-timeline: scroll()) {
+    @keyframes eatHeader {
+        0% { clip-path: inset(0 0 0 0); }
+        100% { clip-path: inset(100% 0 0 0); }
+    }
+
+    .section-divider, .section-divider-shadow {
+        animation: eatHeader linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 100vh; /* a lo largo del alto del header *//*
+    }
+}
+ */
 
