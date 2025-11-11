@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projects.forEach(project => {
         const item = document.createElement("div");
-        item.className = `col-md-4 col-sm-6 col-xs-12 item-space portfolio-content portfolio-item isotope-item ${project.category}`;
+        item.className = `col-md-4 col-sm-6 col-xs-12 item-space portfolio-content portfolio-item isotope-item ${project.categoryFilter}`;
         item.innerHTML = `
           <figure >
             <img src="${project.image}" alt="${project.title}">

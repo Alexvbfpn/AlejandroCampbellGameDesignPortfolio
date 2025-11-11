@@ -11,7 +11,22 @@ const projects =
     ];
 
 */
+/*
+<div className="swiper-slide">
+    <img src="../assets/img/portfolio/Store_MainCapsule_Final.png" alt="">
+</div>
 
+<div className="swiper-slide">
+    <img src="../assets/img/portfolio/Screenshot_Shield_New.png" alt="">
+</div>
+
+<div className="swiper-slide">
+    <img src="../assets/img/portfolio/Screenshot_Rooftops_New.png" alt="">
+</div>
+
+<div className="swiper-slide">
+    <img src="../assets/img/portfolio/Screenshot_Shoot.jpg" alt="">
+    */
 const projects =
     [
         {
@@ -21,8 +36,12 @@ const projects =
             description: "Hermetica: A deckbuilder roguelike",
             image:"assets/img/portfolio/HERMETICA-KEYART.png" ,
             link: "projectsPages/project-Hermetica.html",
-            category: "filter-game",
-            studio: "Red Mountain Games"
+            categoryFilter: "filter-game",
+            category: "Videogame",
+            studio: "Red Mountain Games",
+            storePage: "https://store.steampowered.com/app/2477420/Hermetica/",
+            theme: "hermetica",
+            emoji: "🧪"
         },
 
         {
@@ -32,8 +51,17 @@ const projects =
             description: "Hermetica: A deckbuilder roguelike",
             image:"assets/img/portfolio/LadyUmbrella_Cover_1200x1200.png" ,
             link: "projectsPages/project-LadyUmbrella.html",
-            category: "filter-game",
-            studio: "Zulo Interactive"
+            categoryFilter: "filter-game",
+            category: "Videogame",
+            studio: "Zulo Interactive",
+            storePage: "https://store.steampowered.com/app/3956890/Lady_Umbrella/",
+            theme: "ladyumbrella",
+            gallery: [
+                "../assets/img/portfolio/Store_MainCapsule_Final.png",
+                "../assets/img/portfolio/Screenshot_Shield_New.png",
+                "../assets/img/portfolio/Screenshot_Rooftops_New.png",
+                "../assets/img/portfolio/Screenshot_Shoot.jpg",
+            ],
         },
 
         {
@@ -43,8 +71,12 @@ const projects =
             description: "Alche Mice: A deckbuilder roguelike",
             image: "assets/img/portfolio/AlcheMice_Cover.png",
             link: "projectsPages/project-AlcheMice.html",
-            category: "filter-game",
-            studio: "Red Mountain Games"
+            categoryFilter: "filter-game",
+            category: "Videogame",
+            studio: "Red Mountain Games",
+            storePage: "https://store.steampowered.com/app/3670110/AlcheMice/",
+            theme: "alchemice",
+            emoji: "🧀"
         },
         {
             title: "Moonlit Mystery",
@@ -53,7 +85,8 @@ const projects =
             description: "Moonlit Mystery: A puzzle-detective video game",
             image: "assets/img/portfolio/MoonlitMystery_Cover.png",
             link: "https://alexvbfpn.itch.io/moonlit-mystery",
-            category: "filter-jam",
+            categoryFilter: "filter-jam",
+            category: "Videogame",
             studio: "Origaming Creations"
         },
         {
@@ -63,8 +96,12 @@ const projects =
             description: "Lullaby: A 3d platformer videogame",
             image: "assets/img/portfolio/Lullaby_CoverNight.jpg",
             link: "https://origamingcreations.itch.io/lullaby",
-            category: "filter-jam",
-            studio: "Origaming Creations"
+            categoryFilter: "filter-jam",
+            category: "Videogame",
+            studio: "Origaming Creations",
+            storePage: "https://origamingcreations.itch.io/lullaby",
+            theme: "lullaby",
+            emoji: "🎵"
         },
         {
             title: "Doing Time",
@@ -73,7 +110,8 @@ const projects =
             description: "Doing Time: A puzzle heist video game",
             image: "assets/img/portfolio/DoingTime_Cover_Horizontal.png",
             link: "https://alexvbfpn.itch.io/doing-time",
-            category: "filter-jam",
+            categoryFilter: "filter-jam",
+            category: "Videogame",
             studio: "Origaming Creations"
         },
         {
@@ -83,7 +121,8 @@ const projects =
             description: "OBAT: A 2.5D platformer game",
             image: "assets/img/portfolio/OnceButtonATime_Cover.png",
             link: "https://origamingcreations.itch.io/once-button-a-time",
-            category: "filter-jam",
+            categoryFilter: "filter-jam",
+            category: "Videogame",
             studio: "Origaming Creations"
         },
         {
@@ -93,7 +132,8 @@ const projects =
             description: "Inseye Out: A procedural tool for conveying emotions through eye expression",
             image: "assets/img/portfolio/InseyeOut_Cover.png",
             link: "https://alexvbfpn.itch.io/inseye-out",
-            category: "filter-tool",
+            categoryFilter: "filter-tool",
+            category: "Tool",
             studio: "Own Project"
         },
         {
@@ -103,7 +143,8 @@ const projects =
             description: "Stellar Maze: A 3D puzzle game around constellations",
             image: "assets/img/portfolio/StellarMaze_Cover.png",
             link: "https://alexvbfpn.itch.io/stellar-maze",
-            category: "filter-jam",
+            categoryFilter: "filter-jam",
+            category: "Videogame",
             studio: "Own Project"
         },
         {
@@ -113,7 +154,8 @@ const projects =
             description: "TFG project about videogame mechanics recreation from games like: God of War, Metroid Dread, Superliminal or Viewfinder",
             image: "assets/img/portfolio/RecreatingMechanics_Cover.png",
             link: "https://alexvbfpn.itch.io/recreating-game-mechanics",
-            category: "filter-other",
+            categoryFilter: "filter-other",
+            category: "Academic Project",
             studio: "Own Project"
         },
     ];
