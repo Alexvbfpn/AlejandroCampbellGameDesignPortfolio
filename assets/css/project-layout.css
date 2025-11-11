@@ -7,6 +7,9 @@
     --divider-height: 150px;
 }
 
+main.project-theme:has(.divider-mountain) {
+    --divider-height: 250px;
+}
 
 
 /* 1️⃣ Fijamos la cabecera visualmente */ /* Para el Parallax */
@@ -63,6 +66,7 @@
     height: var(--divider-height, 50px);
     margin-top: calc(var(--divider-height, 150px) * -1); /* lo empuja hacia arriba */
     z-index: 3; /* encima del header */
+    transform: translateY(2px); /* 🔧 empuja un pelín hacia abajo */
 }
 
 .section-divider-shadow,
@@ -99,7 +103,7 @@
     -webkit-mask-image: var(--divider-shape);
     mask-image: var(--divider-shape);
     background-blend-mode: normal;
-    transform: translateY(2px); /* 🔧 empuja un pelín hacia abajo */
+    /* transform: translateY(2px); /* 🔧 empuja un pelín hacia abajo */
     z-index: 3;
 }
 
@@ -109,16 +113,19 @@
     -webkit-mask-image: var(--divider-shape);
     mask-image: var(--divider-shape);
 }
+
 .divider-zigzag {
-    --divider-shape: url("../img/dividers/zigzag.svg");
+    --divider-shape: url("../img/dividers/mountain2.svg");
     -webkit-mask-image: var(--divider-shape);
     mask-image: var(--divider-shape);
 }
+
 .divider-mountain {
     --divider-shape: url("../img/dividers/mountain.svg");
     -webkit-mask-image: var(--divider-shape);
     mask-image: var(--divider-shape);
 }
+
 
 
 /* ===============================
