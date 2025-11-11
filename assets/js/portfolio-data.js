@@ -39,9 +39,16 @@ const projects =
             categoryFilter: "filter-game",
             category: "Videogame",
             studio: "Red Mountain Games",
+            platforms: "Steam, Nintendo Switch, Playstation and Xbox",
             storePage: "https://store.steampowered.com/app/2477420/Hermetica/",
-            theme: "hermetica",
-            emoji: "🧪"
+            theme: "hermetica3",
+            emoji: "🧪",
+            gallery: [
+                "../assets/img/portfolio/HERMETICA-KEYART.png",
+                "../assets/img/portfolio/Hermetica_Screenshot_1.jpg",
+                "../assets/img/portfolio/Hermetica_Screenshot_2.jpg",
+                "../assets/img/portfolio/Hermetica_Screenshot_4.jpg",
+            ],
         },
 
         {
@@ -54,6 +61,7 @@ const projects =
             categoryFilter: "filter-game",
             category: "Videogame",
             studio: "Zulo Interactive",
+            platforms: "Steam",
             storePage: "https://store.steampowered.com/app/3956890/Lady_Umbrella/",
             theme: "ladyumbrella",
             gallery: [
@@ -74,9 +82,16 @@ const projects =
             categoryFilter: "filter-game",
             category: "Videogame",
             studio: "Red Mountain Games",
+            platforms: "Steam, Nintendo Switch, Playstation and Xbox",
             storePage: "https://store.steampowered.com/app/3670110/AlcheMice/",
             theme: "alchemice",
-            emoji: "🧀"
+            emoji: "🧀",
+            gallery: [
+                "../assets/img/portfolio/AlcheMice_Cover.png",
+                "../assets/img/portfolio/AlcheMice_Witch.png",
+                "../assets/img/portfolio/AlcheMice_Enviroment_1.jpg",
+                "../assets/img/portfolio/AlcheMice_Enviroment_1.jpg",
+            ],
         },
         {
             title: "Moonlit Mystery",

@@ -22,10 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const infoBox = document.querySelector(".portfolio-info ul");
     if (infoBox) {
         infoBox.innerHTML = `
-      <li><strong>Category</strong>: Video Game</li>
+      <li><strong>Category</strong>: ${project.category}</li>
+      <li><strong>Position</strong>: ${project.roles}</li>
+      <li><strong>Platforms</strong>: ${project.platforms}</li>
       <li><strong>Studio</strong>: ${project.studio}</li>
       <li><strong>Year</strong>: ${project.year}</li>
-      <li><strong>Position</strong>: ${project.roles}</li>
       <li><strong>Project URL</strong>: <a href="${project.storePage}" target="_blank" rel="noopener noreferrer">${project.title} Store Page</a></li>
     `;
     }
