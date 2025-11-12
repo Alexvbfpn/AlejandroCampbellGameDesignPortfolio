@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (titleElement && project.emoji) {
         titleElement.textContent = `${project.emoji} ${project.title}`;
     }
-
+/*
     // Reinit Swiper (si ya estaba inicializado por main.js)
     if (typeof Swiper !== "undefined") {
         new Swiper(".init-swiper", {
@@ -60,4 +60,84 @@ document.addEventListener("DOMContentLoaded", () => {
             pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
         });
     }
+*/
+    //region --- DYNAMIC DIVIDERS ---
+
+    const dividerWrapper = document.querySelector(".section-divider-wrapper");
+
+    if (!dividerWrapper) {
+        console.warn("❌ No se encontró .section-divider-wrapper en el DOM");
+        return;
+    }
+
+    if(dividerWrapper && project.dividerShape) {
+        // Select the classes or html regions we want to change its divider class
+        const shadow = dividerWrapper.querySelector(".section-divider-shadow");
+        const divider = dividerWrapper.querySelector(".section-divider");
+
+        if (!shadow || !divider) {
+            console.warn("❌ No se encontraron los elementos .section-divider-shadow o .section-divider");
+            return;
+        }
+
+        if (!project.dividerShape) {
+            console.warn("⚠️ Este proyecto no tiene definida la propiedad dividerShape");
+            return;
+        }
+
+        //console.log("✅ Aplicando divider:", project.dividerShape);
+
+
+        // Clean previous classes (any "divider-*")
+        shadow.classList.forEach(cls => {
+            if (cls.startsWith("divider-")) shadow.classList.remove(cls);
+        })
+        divider.classList.forEach(cls => {
+            if (cls.startsWith("divider-")) divider.classList.remove(cls);
+        });
+
+        // Aplly new divider shape
+        shadow.classList.add(project.dividerShape);
+        divider.classList.add(project.dividerShape);
+
+    }
+
+    //endregion DYNAMIC DIVIDERS END
 });
+
+/* --- DISCARDED NEW CARRUSEL ---
+    // 🖼️ CARRUSEL DE IMÁGENES
+    const swiperWrapper = document.querySelector(".portfolio-details-slider .swiper-wrapper");
+    if (swiperWrapper && project.gallery?.length) {
+        swiperWrapper.innerHTML = project.gallery
+            .map(img => `<div class="swiper-slide"><img src="../${img}" alt="${project.title}"></div>`)
+            .join("");
+
+        // Inicializar Swiper después de crear los slides
+        if (typeof Swiper !== "undefined") {
+            new Swiper(".portfolio-details-slider.init-swiper", {
+                loop: true,
+                speed: 600,
+                slidesPerView: "auto",
+                autoplay: { delay: 5000 },
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "bullets",
+                    clickable: true,
+                },
+                observer: true,
+                observeParents: true,
+            });
+        }
+    }
+    /*
+    // Reinit Swiper (si ya estaba inicializado por main.js)
+    if (typeof Swiper !== "undefined") {
+        new Swiper(".init-swiper", {
+            loop: true,
+            speed: 600,
+            autoplay: { delay: 5000 },
+            slidesPerView: "auto",
+            pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
+        });
+    }*/
