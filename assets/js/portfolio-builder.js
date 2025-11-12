@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         item.className = `col-md-4 col-sm-6 col-xs-12 item-space portfolio-content portfolio-item isotope-item ${project.categoryFilter}`;
         item.innerHTML = `
           <figure >
-            <img src="${project.image}" alt="${project.title}">
+            <img src="${project.coverImage}" alt="${project.title}">
             <div class="portfolio-info">
               <h4>${project.year}</h4>
               <span class="studio">${project.studio}</span>
