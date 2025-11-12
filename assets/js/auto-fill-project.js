@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const theme = [...main.classList].find(cls =>!["main", "project-theme", "default"].includes(cls));
     if (!theme) return;
 
+    applyProjectTheme(theme)
+
+    //endregion DYNAMIC DIVIDERS END
+});
+
+function applyProjectTheme(theme) {
+
     // Encuentra el proyecto correspondiente
     const project = projects.find(p => p.theme === theme);
     if (!project) {
@@ -49,18 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (titleElement && project.emoji) {
         titleElement.textContent = `${project.emoji} ${project.title}`;
     }
-/*
-    // Reinit Swiper (si ya estaba inicializado por main.js)
-    if (typeof Swiper !== "undefined") {
-        new Swiper(".init-swiper", {
-            loop: true,
-            speed: 600,
-            autoplay: { delay: 5000 },
-            slidesPerView: "auto",
-            pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
-        });
-    }
-*/
+    /*
+        // Reinit Swiper (si ya estaba inicializado por main.js)
+        if (typeof Swiper !== "undefined") {
+            new Swiper(".init-swiper", {
+                loop: true,
+                speed: 600,
+                autoplay: { delay: 5000 },
+                slidesPerView: "auto",
+                pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
+            });
+        }
+    */
     //region --- DYNAMIC DIVIDERS ---
 
     const dividerWrapper = document.querySelector(".section-divider-wrapper");
@@ -102,7 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    //endregion DYNAMIC DIVIDERS END
+}
+
+// Ejemplo: botones de cambio de tema
+document.querySelectorAll(".theme-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const theme = btn.dataset.theme;
+        applyProjectTheme(theme);
+    });
 });
 
 /* --- DISCARDED NEW CARRUSEL ---

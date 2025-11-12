@@ -106,6 +106,7 @@ const projects =
             categoryFilter: "filter-jam",
             category: "Videogame",
             studio: "Origaming Creations",
+            platforms: "Windows and Web (Itch.io)",
             storePage: "https://origamingcreations.itch.io/lullaby",
             theme: "lullaby",
             emoji: "🎵",
