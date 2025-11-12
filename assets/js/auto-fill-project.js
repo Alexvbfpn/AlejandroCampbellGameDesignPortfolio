@@ -43,7 +43,7 @@ function applyProjectTheme(theme) {
     if (descBox) {
         descBox.textContent = project.description;
     }
-
+    /*
     // 🖼️ CARRUSEL DE IMÁGENES
     const swiperWrapper = document.querySelector(".portfolio-details-slider .swiper-wrapper");
     if (swiperWrapper && project.gallery?.length) {
@@ -51,11 +51,8 @@ function applyProjectTheme(theme) {
             .map(img => `<div class="swiper-slide"><img src="../${img}" alt="${project.title}"></div>`)
             .join("");
     }
+     */
 
-    // 🧪 EMOJI en el título o encabezado
-    if (titleElement && project.emoji) {
-        titleElement.textContent = `${project.emoji} ${project.title}`;
-    }
     /*
         // Reinit Swiper (si ya estaba inicializado por main.js)
         if (typeof Swiper !== "undefined") {
@@ -68,6 +65,12 @@ function applyProjectTheme(theme) {
             });
         }
     */
+
+    // 🧪 EMOJI en el título o encabezado
+    if (titleElement && project.emoji) {
+        titleElement.textContent = `${project.emoji} ${project.title}`;
+    }
+
     //region --- DYNAMIC DIVIDERS ---
 
     const dividerWrapper = document.querySelector(".section-divider-wrapper");

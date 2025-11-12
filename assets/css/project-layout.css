@@ -26,6 +26,9 @@ main.project-theme:has(.divider-mountain) {
     --divider-height: 250px;
 }
 
+main.project-theme:has(.divider-buildings) {
+    --divider-height: 150px;
+}
 
 /* 1️⃣ Fijamos la cabecera visualmente */ /* Para el Parallax */
 .project-header-container {
@@ -82,6 +85,7 @@ main.project-theme:has(.divider-mountain) {
     margin-top: calc(var(--divider-height, 150px) * -1); /* lo empuja hacia arriba */
     z-index: 3; /* encima del header */
     transform: translateY(2px); /* 🔧 empuja un pelín hacia abajo */
+    pointer-events: none;
 }
 
 .section-divider-shadow,
@@ -109,6 +113,7 @@ main.project-theme:has(.divider-mountain) {
     filter: blur(8px);
     opacity: 0.4;
     transform: translateY(-12px);
+    /*transform: translateY(-12px);*/ /* Old shadow separation (good for wave) */
     z-index: 2;
 }
 
@@ -137,6 +142,12 @@ main.project-theme:has(.divider-mountain) {
 
 .divider-mountain {
     --divider-shape: url("../img/dividers/mountain.svg");
+    -webkit-mask-image: var(--divider-shape);
+    mask-image: var(--divider-shape);
+}
+
+.divider-buildings {
+    --divider-shape: url("../img/dividers/buildings2.svg");
     -webkit-mask-image: var(--divider-shape);
     mask-image: var(--divider-shape);
 }
