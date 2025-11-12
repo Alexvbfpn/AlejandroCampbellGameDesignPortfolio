@@ -93,7 +93,7 @@ const projects =
                 "../assets/img/portfolio/AlcheMice_Cover.png",
                 "../assets/img/portfolio/AlcheMice_Witch.png",
                 "../assets/img/portfolio/AlcheMice_Enviroment_1.jpg",
-                "../assets/img/portfolio/AlcheMice_Enviroment_1.jpg",
+                "../assets/img/portfolio/AlcheMice_Potion_Crafting.jpg",
             ],
         },
         {
