@@ -41,6 +41,7 @@ const projects =
             studio: "Red Mountain Games",
             platforms: "Steam, Nintendo Switch, Playstation and Xbox",
             storePage: "https://store.steampowered.com/app/2477420/Hermetica/",
+            trailerURL: "https://www.youtube.com/embed/-huQUEA0v-w",
             theme: "hermetica3",
             emoji: "🧪",
             dividerShape: "divider-zigzag",
@@ -64,6 +65,7 @@ const projects =
             studio: "Zulo Interactive",
             platforms: "Steam",
             storePage: "https://store.steampowered.com/app/3956890/Lady_Umbrella/",
+            trailerURL: "https://www.youtube.com/embed/X_DgUlOjEhE",
             theme: "ladyumbrella",
             dividerShape: "divider-buildings",
             gallery: [
@@ -108,6 +110,7 @@ const projects =
             studio: "Origaming Creations",
             platforms: "Windows and Web (Itch.io)",
             storePage: "https://origamingcreations.itch.io/lullaby",
+            trailerURL: "https://www.youtube.com/embed/ZrVPbUZk2qM",
             theme: "lullaby",
             emoji: "🎵",
             dividerShape: "divider-wave",

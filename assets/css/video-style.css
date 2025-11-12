@@ -137,7 +137,20 @@
         filter: blur(12px) brightness(1);
     }
 }
+/*
+.video-showcase iframe {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
 
+.video-showcase iframe.fade-out {
+    opacity: 0;
+}
+
+.video-showcase iframe.fade-in {
+    opacity: 1;
+}
+*/
 /*
 .video-wrapper2 iframe:hover {
     transform: scale(1.02);

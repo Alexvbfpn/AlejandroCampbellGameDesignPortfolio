@@ -112,6 +112,26 @@ function applyProjectTheme(theme) {
 
     }
 
+    // 🎥 TRAILER
+    const trailerFrame = document.querySelector(".video-showcase iframe");
+    if (trailerFrame) {
+        if (project.trailerURL) {
+            // Transición suave al cambiar el vídeo
+            trailerFrame.classList.add("fade-out");
+            setTimeout(() => {
+                trailerFrame.src = project.trailerURL;
+                trailerFrame.classList.remove("fade-out");
+                trailerFrame.classList.add("fade-in");
+            }, 300); // tiempo de fade out
+        } else {
+            // Si no hay trailer, se oculta toda la sección
+            const videoSection = document.querySelector(".video-showcase");
+            if (videoSection) videoSection.style.display = "none";
+        }
+    }
+
+    setTimeout(() => trailerFrame.classList.remove("fade-in"), 600);
+
 }
 
 // Ejemplo: botones de cambio de tema
