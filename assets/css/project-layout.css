@@ -197,9 +197,18 @@ main.project-theme:has(.divider-buildingsPNG) {
     font-weight: 900;
     text-transform: uppercase;
     color: var(--heading-color);
-    border-bottom: 3px solid var(--accent-color);
     display: inline-block;
     padding-bottom: 4px;
+    /*border-bottom: 3px solid var(--accent-color);*/
+
+    background: linear-gradient(
+            90deg,
+            var(--gradient-bright-color),
+            var(--gradient-darker-color)
+    );
+    background-size: 60% 3px;   /* alto del “borde” */
+    background-repeat: no-repeat;
+    background-position: 0 100%; /* colocar abajo */
 }
 
 .custom-list li {
