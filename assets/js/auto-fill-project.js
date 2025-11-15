@@ -30,6 +30,7 @@ function applyProjectTheme(theme) {
     if (infoBox) {
         infoBox.innerHTML = `
       <li><strong>Category</strong>: ${project.category}</li>
+      <li><strong>Genre</strong>: ${project.genre}</li>
       <li><strong>Position</strong>: ${project.roles}</li>
       <li><strong>Platforms</strong>: ${project.platforms}</li>
       <li><strong>Studio</strong>: ${project.studio}</li>
@@ -39,10 +40,12 @@ function applyProjectTheme(theme) {
     }
 
     // 📝 DESCRIPCIÓN
+    /*
     const descBox = document.querySelector(".portfolio-description p");
     if (descBox) {
         descBox.textContent = project.description;
     }
+     */
 
 
     //region --- 🎥 TRAILER ---
