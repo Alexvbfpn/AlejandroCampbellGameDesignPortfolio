@@ -201,6 +201,7 @@
 
     /* ICONO POR TEMA */
     --list-icon: '☂';
+    --list-image: url('../img/icons/umbrellaIcon.png');
 }
 
 /* 🌌 Aether Theme */
