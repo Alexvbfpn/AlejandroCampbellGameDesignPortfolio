@@ -44,6 +44,7 @@ const projects =
             trailerURL: "https://www.youtube.com/embed/-huQUEA0v-w",
             theme: "hermetica3",
             emoji: "🧪",
+            listIconType: "emoji",  // "emoji" | "image"
             dividerShape: "divider-zigzag",
             gallery: [
                 "../assets/img/portfolio/HERMETICA-KEYART.png",
@@ -90,6 +91,7 @@ const projects =
             storePage: "https://store.steampowered.com/app/3670110/AlcheMice/",
             theme: "alchemice",
             emoji: "🧀",
+            listIconImage: "../img/icons/cheeseIconDuo.png",
             dividerShape: "divider-mountain",
             gallery: [
                 "../assets/img/portfolio/AlcheMice_Cover.png",

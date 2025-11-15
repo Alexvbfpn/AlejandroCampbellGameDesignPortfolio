@@ -43,33 +43,61 @@ function applyProjectTheme(theme) {
     if (descBox) {
         descBox.textContent = project.description;
     }
-    /*
-    // 🖼️ CARRUSEL DE IMÁGENES
-    const swiperWrapper = document.querySelector(".portfolio-details-slider .swiper-wrapper");
-    if (swiperWrapper && project.gallery?.length) {
-        swiperWrapper.innerHTML = project.gallery
-            .map(img => `<div class="swiper-slide"><img src="../${img}" alt="${project.title}"></div>`)
-            .join("");
-    }
-     */
 
-    /*
-        // Reinit Swiper (si ya estaba inicializado por main.js)
-        if (typeof Swiper !== "undefined") {
-            new Swiper(".init-swiper", {
-                loop: true,
-                speed: 600,
-                autoplay: { delay: 5000 },
-                slidesPerView: "auto",
-                pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
-            });
+
+    //region --- 🎥 TRAILER ---
+    const trailerFrame = document.querySelector(".video-showcase iframe");
+    if (trailerFrame) {
+        if (project.trailerURL) {
+            // Transición suave al cambiar el vídeo
+            trailerFrame.classList.add("fade-out");
+            setTimeout(() => {
+                trailerFrame.src = project.trailerURL;
+                trailerFrame.classList.remove("fade-out");
+                trailerFrame.classList.add("fade-in");
+            }, 300); // tiempo de fade out
+        } else {
+            // Si no hay trailer, se oculta toda la sección
+            const videoSection = document.querySelector(".video-showcase");
+            if (videoSection) videoSection.style.display = "none";
         }
-    */
+    }
+
+    setTimeout(() => trailerFrame.classList.remove("fade-in"), 600);
+
+    //endregion TRAILER
+
+    //region --- DYNAMIC BULLET LIST SYMBOLS (EMOJIS OR IMAGE) ---
 
     // 🧪 EMOJI en el título o encabezado
     if (titleElement && project.emoji) {
         titleElement.textContent = `${project.emoji} ${project.title}`;
     }
+
+    // 📌 ICONOS DINÁMICOS DE LISTA (pero controlados desde HTML)
+    document.querySelectorAll(".custom-project-list").forEach(ul => {
+
+        const type = ul.dataset.iconType; // "image", "emoji" o undefined
+
+        if (type === "image") {
+            // Forzar imagen
+            if (project.listIconImage) {
+                ul.style.setProperty("--list-image", `url("${project.listIconImage}")`);
+            }
+            ul.style.setProperty("--list-icon", "''");
+            return;
+        }
+
+        // Si type === "emoji" o si no hay type → usar emoji
+        if (project.emoji) {
+            ul.style.setProperty("--list-icon", `'${project.emoji}'`);
+        }
+
+        // limpiar imagen por si acaso
+        ul.style.removeProperty("--list-image");
+    });
+
+    //endregion emojis
 
     //region --- DYNAMIC DIVIDERS ---
 
@@ -112,25 +140,30 @@ function applyProjectTheme(theme) {
 
     }
 
-    // 🎥 TRAILER
-    const trailerFrame = document.querySelector(".video-showcase iframe");
-    if (trailerFrame) {
-        if (project.trailerURL) {
-            // Transición suave al cambiar el vídeo
-            trailerFrame.classList.add("fade-out");
-            setTimeout(() => {
-                trailerFrame.src = project.trailerURL;
-                trailerFrame.classList.remove("fade-out");
-                trailerFrame.classList.add("fade-in");
-            }, 300); // tiempo de fade out
-        } else {
-            // Si no hay trailer, se oculta toda la sección
-            const videoSection = document.querySelector(".video-showcase");
-            if (videoSection) videoSection.style.display = "none";
-        }
-    }
+    //endregion DYNAMIC DIVIDERS
 
-    setTimeout(() => trailerFrame.classList.remove("fade-in"), 600);
+    /*
+    // 🖼️ CARRUSEL DE IMÁGENES
+    const swiperWrapper = document.querySelector(".portfolio-details-slider .swiper-wrapper");
+    if (swiperWrapper && project.gallery?.length) {
+        swiperWrapper.innerHTML = project.gallery
+            .map(img => `<div class="swiper-slide"><img src="../${img}" alt="${project.title}"></div>`)
+            .join("");
+    }
+     */
+
+    /*
+        // Reinit Swiper (si ya estaba inicializado por main.js)
+        if (typeof Swiper !== "undefined") {
+            new Swiper(".init-swiper", {
+                loop: true,
+                speed: 600,
+                autoplay: { delay: 5000 },
+                slidesPerView: "auto",
+                pagination: { el: ".swiper-pagination", type: "bullets", clickable: true },
+            });
+        }
+    */
 
 }
 
