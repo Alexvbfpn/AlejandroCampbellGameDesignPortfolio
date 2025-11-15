@@ -42,7 +42,6 @@ main.project-theme:has(.divider-buildingsPNG) {
 .project-header-container {
     position: sticky;
     overflow: hidden;
-    max-height: 100vh; /* nunca más alto que la ventana */    /* PARA MOVILES PEQUEÑOS */
     background-color: var(--header-bg-color);
     top: 0;
     z-index: 0;
@@ -54,23 +53,25 @@ main.project-theme:has(.divider-buildingsPNG) {
     padding-bottom: calc(var(--divider-height) * 0.7);
     position: relative;
     z-index: 2;
-    /* PARA MOVILES PEQUEÑOS */
-    max-height: 100vh;
+
+
     overflow-y: auto;
     -webkit-overflow-scrolling: touch; /* para suavidad en iOS */
 }
 
-/* PARA MOVILES PEQUEÑOS */
-@media (max-width: 400px) {
+/* Si la altura del header supera el viewport, desactivamos sticky */
+@media (max-height: 600px) { /* ajusta según el dispositivo */
     .project-header-container {
-        position: relative; /* ya no sticky */
-        top: auto;
+        position: relative;
+        /* PARA MOVILES PEQUEÑOS */
+        max-height: 100vh;
     }
 }
 
 @media (max-width: 768px) {
     .project-header-container .header-content {
         padding-bottom: 250px;
+        max-height: 100vh; /* nunca más alto que la ventana */    /* PARA MOVILES PEQUEÑOS */
     }
 }
 
