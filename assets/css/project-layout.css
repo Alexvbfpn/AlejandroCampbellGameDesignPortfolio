@@ -30,13 +30,23 @@ main.project-theme:has(.divider-buildings) {
     --divider-height: 150px;
 }
 
+main.project-theme:has(.divider-buildingsPNG) {
+    --divider-height: 170px;
+}
+
+.header-inner-top-padding{
+    padding-top: 60px;
+}
+
 /* 1️⃣ Fijamos la cabecera visualmente */ /* Para el Parallax */
 .project-header-container {
     position: sticky;
     overflow: hidden;
+    max-height: 100vh; /* nunca más alto que la ventana */    /* PARA MOVILES PEQUEÑOS */
     background-color: var(--header-bg-color);
     top: 0;
     z-index: 0;
+    padding-top: 0;
 }
 
 /* 2️⃣ Contenido de la cabecera centrado y cubierto */
@@ -44,6 +54,18 @@ main.project-theme:has(.divider-buildings) {
     padding-bottom: calc(var(--divider-height) * 0.7);
     position: relative;
     z-index: 2;
+    /* PARA MOVILES PEQUEÑOS */
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* para suavidad en iOS */
+}
+
+/* PARA MOVILES PEQUEÑOS */
+@media (max-width: 400px) {
+    .project-header-container {
+        position: relative; /* ya no sticky */
+        top: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -151,6 +173,15 @@ main.project-theme:has(.divider-buildings) {
     -webkit-mask-image: var(--divider-shape);
     mask-image: var(--divider-shape);
 }
+.divider-buildingsPNG {
+    --divider-shape: url("../img/dividers/buildings.png");
+    -webkit-mask-image: var(--divider-shape);
+    mask-image: var(--divider-shape);
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    -webkit-mask-size: auto;
+    mask-size: auto;
+}
 
 
 
@@ -208,55 +239,6 @@ main.project-theme:has(.divider-buildings) {
 .project-info .note {
     font-size: 0.9rem;
 }
-
-/* ===============================
-   Custom Lists
-================================ */
-
-/* === BASE GLOBAL PARA TODAS LAS CUSTOM LISTS === */
-/*
-ul.custom-project-list {
-    list-style: none;
-    margin: 1em 0;
-    padding-left: 1.8em;
-}
-
-ul.custom-project-list li {
-    position: relative;
-    margin-bottom: 0.5em;
-    line-height: 1.6;
-}
-*/
-/* Ícono genérico: posición y comportamiento */
-/*
-ul.custom-list li::before {
-    content: '';
-    position: absolute;
-    left: -1.5em;
-    top: 0.2em;
-    width: 1.2em;
-    height: 1.2em;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.9;
-}
-*/
-/* === VARIANTES ESPECÍFICAS === */ /*
-ul.custom-list.icon-cheese li::before {
-    content: '🧀';
-}
-
-ul.custom-cheese li::before
-{
-    content: '🧀';
-    display: inline-block;
-    width: 1em;
-    margin-left: -1.5em;
-    margin-right: 0.5em;
-    vertical-align: middle;
-}
-*/
 
 /* === BASE GLOBAL === */
 ul.custom-project-list {
@@ -336,3 +318,51 @@ ul.custom-project-list li:hover::before {
 }
  */
 
+/* ===============================
+   Custom Lists
+================================ */
+
+/* === BASE GLOBAL PARA TODAS LAS CUSTOM LISTS === */
+/*
+ul.custom-project-list {
+    list-style: none;
+    margin: 1em 0;
+    padding-left: 1.8em;
+}
+
+ul.custom-project-list li {
+    position: relative;
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+*/
+/* Ícono genérico: posición y comportamiento */
+/*
+ul.custom-list li::before {
+    content: '';
+    position: absolute;
+    left: -1.5em;
+    top: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.9;
+}
+*/
+/* === VARIANTES ESPECÍFICAS === */ /*
+ul.custom-list.icon-cheese li::before {
+    content: '🧀';
+}
+
+ul.custom-cheese li::before
+{
+    content: '🧀';
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+*/
