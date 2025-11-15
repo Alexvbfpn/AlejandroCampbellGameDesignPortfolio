@@ -68,7 +68,7 @@ const projects =
             storePage: "https://store.steampowered.com/app/3956890/Lady_Umbrella/",
             trailerURL: "https://www.youtube.com/embed/X_DgUlOjEhE",
             theme: "ladyumbrella",
-            dividerShape: "divider-buildings",
+            dividerShape: "divider-buildingsPNG",
             gallery: [
                 "../assets/img/portfolio/Store_MainCapsule_Final.png",
                 "../assets/img/portfolio/Screenshot_Shield_New.png",
