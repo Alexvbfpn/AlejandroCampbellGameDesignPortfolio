@@ -47,6 +47,7 @@ function applyProjectTheme(theme) {
 
     //region --- 🎥 TRAILER ---
     const trailerFrame = document.querySelector(".video-showcase iframe");
+    const trailerHeader = document.querySelector(".video-showcase h2");
     if (trailerFrame) {
         if (project.trailerURL) {
             // Transición suave al cambiar el vídeo
@@ -62,6 +63,7 @@ function applyProjectTheme(theme) {
             if (videoSection) videoSection.style.display = "none";
         }
     }
+    trailerHeader.textContent = `${project.title} Trailer`
 
     setTimeout(() => trailerFrame.classList.remove("fade-in"), 600);
 
