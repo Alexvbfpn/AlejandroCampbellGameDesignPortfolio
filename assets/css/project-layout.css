@@ -316,8 +316,8 @@ ul.custom-project-list[data-icon-type="none"] > li::before {
 
 /* === SUBLIST === */
 ul.custom-project-list ul.custom-project-list {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1em; /* OLD 0.5em */
+    margin-bottom: 1em; /* OLD 0.5em */
     /*padding-left: 1.8em; /* Indent extra */
     /*padding-left: 2.25em;/* New Indent extra */
     padding-left: 3em; /* New Indent extra (with border) */
@@ -333,12 +333,18 @@ ul.custom-project-list ul.custom-project-list ul.custom-project-list {
     /*padding-left: 2.25em;/* New Indent extra */
     padding-left: 1.5em; /* New Indent extra (with border) */
     border-left: none;
-    font-size: 0.90rem;
+    font-size: 0.9rem;
 
 }
 
 /* ajustes responsivos / estéticos */
 ul.custom-project-list > li strong { font-weight: 700; }
+
+/* CUSTOM ICONS FOR EACH LI */
+ul.custom-project-list li.custom-icon::before {
+    content: "";
+    background-image: var(--list-image);
+}
 
 /* Si quieres que los iconos de sublistas sean más pequeños: */
 /*
