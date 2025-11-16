@@ -71,6 +71,7 @@ const projects =
             trailerURL: "https://www.youtube.com/embed/X_DgUlOjEhE",
             theme: "ladyumbrella",
             emoji: '🌂',
+            listIconImage: "../img/icons/umbrellaIcon.png",
             dividerShape: "divider-buildingsPNG",
             gallery: [
                 "../assets/img/portfolio/Store_MainCapsule_Final.png",

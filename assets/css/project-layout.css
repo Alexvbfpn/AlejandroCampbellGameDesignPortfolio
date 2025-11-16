@@ -215,6 +215,12 @@ main.project-theme:has(.divider-buildingsPNG) {
     margin-bottom: 10px;
 }
 
+
+.project-accordion {
+    padding-top: 30px;
+}
+
+
 .accordion-button {
     cursor: pointer;
 }
@@ -257,15 +263,15 @@ ul.custom-project-list {
     padding-left: 2.05em; /* Mantiene el indentado típico */
 }
 
-ul.custom-project-list li {
+ul.custom-project-list > li {
     position: relative;
     margin-bottom: 0.6em;
     line-height: 1.6;
-    font-size: 1rem;
+    /*font-size: 1rem;*/
 }
 
 /* === Pseudo-elemento para ícono === */
-ul.custom-project-list li::before {
+ul.custom-project-list > li::before {
     content: var(--list-icon, ''); /* Por defecto usa emoji */
     position: absolute;
     left: -1.75em; /* ECHALE UN OJO A ESTO CUANDO VUELVAS QUE PUEDE QUEDAR BIEN SEPARARLO MÁS (AUNQUE HABRÁ QUE TOCAR EL INDENTADO) */
@@ -283,11 +289,66 @@ ul.custom-project-list li::before {
     opacity: 0.95;
 }
 
-/* Si es tipo imagen, usa el background */
-ul.custom-project-list[data-icon-type="image"] li::before { /* ul.custom-project-list[style*="--icon-type: image"] li::before { */
-    content: '';
+/*  MODO EMOJI — cuando NO es data-icon-type="image"
+    Usamos attr(data-list-icon) (seguro y sencillo) */
+ul.custom-project-list:not([data-icon-type="image"]) > li::before {
+    content: var(--list-icon, '');
+    background-image: none;
+}
+
+/*  MODO IMAGEN — cuando UL tiene data-icon-type="image" */
+ul.custom-project-list[data-icon-type="image"] > li::before {
+    content: "";
+    /* variable CSS --list-image debe contener: url("...") */
     background-image: var(--list-image);
 }
+
+/*  MODO IMAGEN — cuando UL tiene data-icon-type="image" */
+ul.custom-project-list[data-icon-type="none"] > li::before {
+    content: "•";
+    /* variable CSS --list-image debe contener: url("...") */
+    background-image: none;
+    width: 0.6em;        /* Mucho más pequeño */
+    height: 0.6em;
+    left: -1em;          /* Acercamos el icono al texto */
+    top: 0.35em;         /* Alineación vertical perfecta */
+}
+
+/* === SUBLIST === */
+ul.custom-project-list ul.custom-project-list {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    /*padding-left: 1.8em; /* Indent extra */
+    /*padding-left: 2.25em;/* New Indent extra */
+    padding-left: 3em; /* New Indent extra (with border) */
+    border-left: 2px dashed var(--accent-color, #ccc); /* opcional visual */
+    font-size: 0.95rem;
+
+}
+
+ul.custom-project-list ul.custom-project-list ul.custom-project-list {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    /*padding-left: 1.8em; /* Indent extra */
+    /*padding-left: 2.25em;/* New Indent extra */
+    padding-left: 1.5em; /* New Indent extra (with border) */
+    border-left: none;
+    font-size: 0.90rem;
+
+}
+
+/* ajustes responsivos / estéticos */
+ul.custom-project-list > li strong { font-weight: 700; }
+
+/* Si quieres que los iconos de sublistas sean más pequeños: */
+/*
+ul.custom-project-list ul.custom-project-list > li::before {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.95rem;
+    top: 0.18rem;
+}
+ */
 
 /* PARA EL DEFAULT ANULAMOS (De momento) */
 .project-theme.default ul.custom-project-list {

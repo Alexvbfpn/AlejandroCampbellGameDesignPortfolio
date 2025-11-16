@@ -81,6 +81,23 @@ function applyProjectTheme(theme) {
 
     // 📌 ICONOS DINÁMICOS DE LISTA (pero controlados desde HTML)
     document.querySelectorAll(".custom-project-list").forEach(ul => {
+        const forced = ul.dataset.iconType; // "image" o undefined
+
+        if (forced === "image") {
+            // Modo imagen
+            if (project.listIconImage) {
+                ul.style.setProperty("--list-image", `url("${project.listIconImage}")`);
+            }
+            ul.style.removeProperty("--list-icon");
+        } else {
+            // Modo emoji
+            const emoji = project.emoji || "•";
+            ul.style.setProperty("--list-icon", `"${emoji}"`);
+            ul.style.removeProperty("--list-image");
+        }
+    });
+    /* OLD
+    document.querySelectorAll(".custom-project-list").forEach(ul => {
 
         const type = ul.dataset.iconType; // "image", "emoji" o undefined
 
@@ -101,6 +118,7 @@ function applyProjectTheme(theme) {
         // limpiar imagen por si acaso
         ul.style.removeProperty("--list-image");
     });
+     */
 
     //endregion emojis
 
@@ -118,7 +136,7 @@ function applyProjectTheme(theme) {
         const shadow = dividerWrapper.querySelector(".section-divider-shadow");
         const divider = dividerWrapper.querySelector(".section-divider");
 
-        if (!shadow || !divider) {
+        if (!shadow && !divider) {
             console.warn("❌ No se encontraron los elementos .section-divider-shadow o .section-divider");
             return;
         }
@@ -129,19 +147,22 @@ function applyProjectTheme(theme) {
         }
 
         //console.log("✅ Aplicando divider:", project.dividerShape);
-
-
         // Clean previous classes (any "divider-*")
-        shadow.classList.forEach(cls => {
-            if (cls.startsWith("divider-")) shadow.classList.remove(cls);
-        })
         divider.classList.forEach(cls => {
             if (cls.startsWith("divider-")) divider.classList.remove(cls);
         });
 
         // Aplly new divider shape
-        shadow.classList.add(project.dividerShape);
         divider.classList.add(project.dividerShape);
+
+        if(!shadow) return;
+
+        // Aplly new divider shadow shape
+        shadow.classList.add(project.dividerShape);
+        // Clean previous classes (any "divider-*")
+        shadow.classList.forEach(cls => {
+            if (cls.startsWith("divider-")) shadow.classList.remove(cls);
+        })
 
     }
 
