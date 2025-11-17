@@ -170,7 +170,7 @@ function enableMobilePortfolioBehavior(mode = 'A') {
     });
 
     // por si quieres depurar: (descomenta para logs)
-    grid.addEventListener('click', () => console.log('click delegación'));
+    // grid.addEventListener('click', () => console.log('click delegación'));
 }
 
 

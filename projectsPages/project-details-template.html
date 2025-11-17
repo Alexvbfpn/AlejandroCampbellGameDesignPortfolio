@@ -265,7 +265,7 @@
 </footer>
 
 <!-- Scroll Top -->
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" id="scroll-top" class="project-theme scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Preloader -->
 <div id="preloader"></div>
@@ -317,7 +317,8 @@
 <script>
   const buttons = document.querySelectorAll('#theme-switcher .theme-btn');
   const main = document.querySelector('main.project-theme');
-
+  const scrollTop = document.querySelector('#scroll-top.project-theme');
+  scrollClasses = scrollTop.classList;
   // Creamos el overlay
   const overlay = document.createElement('div');
   overlay.id = 'theme-overlay';
@@ -338,7 +339,8 @@
       // Después de la transición, aplicamos el tema y ocultamos overlay
       setTimeout(() => {
         main.className = 'project-theme ' + theme;
-
+        scrollTop.className = 'project-theme ' + theme + ' ' + scrollClasses;
+        scrollTop.classList.add('project-theme' + theme);
       }, 0.1); // coincide con transition duration
     });
   });
