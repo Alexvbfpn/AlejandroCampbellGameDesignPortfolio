@@ -117,12 +117,12 @@
           <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
             <h3>Project information</h3>
             <ul>
-              <li><strong>Category</strong>: Video game</li>
+             <!-- <li><strong>Category</strong>: Video game</li>
               <li><strong>Platforms</strong>: Steam, Playstation & Nintendo Switch</li>
               <li><strong>Company</strong>: ASU Company</li>
-              <!-- <li><strong>Project date</strong>: 01 March, 2020</li> -->
+              &lt;!&ndash; <li><strong>Project date</strong>: 01 March, 2020</li> &ndash;&gt;
               <li><strong>Position</strong>: Game Designer & Level Designer</li>
-              <li><strong>Project URL</strong>: <a href="#" target="_blank" rel="noopener noreferrer">www.example.com</a></li>
+              <li><strong>Project URL</strong>: <a href="#" target="_blank" rel="noopener noreferrer">www.example.com</a></li>-->
             </ul>
           </div>
           <!--
@@ -183,25 +183,50 @@
         <!-- 🧠 MY CONTRIBUTIONS -->
         <h2 class="section-title mb-4" data-aos="fade-up">Key Contributions</h2>
 
-        <ul class="custom-list" data-aos="fade-up">
-          <li>Worked with <strong>Unreal Engine</strong> upgrading multiplayer systems.</li>
-          <li>Testing & Analytics.</li>
-          <li>Prototyped <strong>new map events</strong> and designed <strong>premium packs</strong>.</li>
-        </ul>
-
-        <ul class="custom-project-list">
-          <li>Worked with <strong>Unreal Engine</strong> upgrading multiplayer systems.</li>
-          <li>Testing & Analytics.</li>
-          <li>Prototyped <strong>new map events</strong> and designed <strong>premium packs</strong>.</li>
-          <li>Improved AI and implemented achievements system.</li>
-          <li>Created dynamic lighting and environment effects.</li>
-        </ul>
-
         <ul class="custom-project-list" data-icon-type="image">
-          <li>Worked with Unreal Engine upgrading multiplayer systems.</li>
-          <li>Testing & Analytics.</li>
-          <li>Prototyped new map events and designed premium packs.</li>
-          <li>Successfully pitched the game to different stakeholders.</li>
+          <li><b>Balanced</b> the game’s <b>combat difficulty</b> using <b>spreadsheets and rational design</b> methodologies to <b>fine-tune
+            over 75 enemies</b> featuring rock-paper-scissors–style mechanic, <b>achieving</b> a <b>more balanced player experience</b>
+            that <b>increased player engagement by 23%</b>.</li>
+
+          <li><b>Developed a data-gathering method</b> based on csv files for <b>game balancing and tuning</b>.</li>
+
+          <li><b>Designed</b> and <b>implemented</b> core systems, including <b>inventory management</b>, <b>item functionality</b>, and <b>in-game codices</b>.</li>
+
+          <li>Owned the <b>design</b>, <b>implementation</b>, and ongoing <b>iteration</b> of the <b>game feel</b>, including <b>feedback systems</b>,
+            <b>camera effects</b>, <b>controls</b>, and <b>moment-to-moment interactions</b>.
+            <p>Among the game-feel effects I implemented for the player’s altered states are:</p>
+            <ul class="custom-project-list">
+
+              <li class="custom-icon" style="--list-image: url('/assets/img/icons/lowHealthIcon.png')"><strong>Low Health:</strong> Added red pulsing vignette, intensified heartbeat SFX, subtle lens distortion with heartbeat-synced screen pulses, weakened camera stability, and desaturated color grading to convey critical condition.</li>
+
+              <li class="custom-icon" style="--list-image: url('/assets/img/icons/poisonIcon.png')"><strong>Poisoned:</strong> Implemented purple vein-like screen pulses that filled and faded rhythmically, matching the stylized visual treatment applied to the poisoned character, supported by subtle distortion cues and accompanied by a sharp camera shake representing the insertion of the poison.</li>
+
+              <li><strong>Acid Exposure:</strong> Implemented corrosive droplet impacts with dripping particle overlays, sizzling SFX, and hard camera jitter.</li>
+
+              <li style="--list-icon:'🔥';"><strong>Burning (Fire Damage):</strong> Created a paper-burning screen effect inspired by Hermetica’s art style,
+                with edges darkening and curling inward, enhanced by ember flickers, crackling fire SFX to enhance
+                the sense of scorching damage, and a wide, panic-like camera shake modulation to convey the intense pain and spread of the flames.</li>
+
+              <li class="custom-icon" style="--list-image: url('/assets/img/icons/brokenBoneIcon.png')"><strong>Injured (Broken Bone):</strong> Added sharp vignette flashes, stagger animations, restricted movement responsiveness, and crunch-like impact SFX.</li>
+
+              <li style="--list-icon:'🌀';"><strong>Dizzy:</strong> Applied a dizzying spiral overlay, screen-edge distortion, and a dark green vignette to visually convey disorientation, accompanied by subtle ringing/echo SFX.</li>
+
+              <li class="custom-icon" style="--list-image: url('/assets/img/icons/cursedIcon.png')"><strong>Cursed:</strong> Implemented a vampire-themed curse effect, with sharp fangs biting into the screen, darkened vignette, shadowy artifacts, and subtle whispering ambient SFX to reinforce the ominous sensation.</li>
+
+              <li style="--list-icon:'🩸';"><strong>Bleeding:</strong> Added red directional streak overlays, heartbeat-synced screen pulses, weakened camera stability, and progressive vignette darkening.</li>
+
+              <li style="--list-icon:'🐌';"><strong>Sluggish (Slow Debuff):</strong> Introduced reduced camera responsiveness, softened motion blur trails, and delayed input feedback to emphasize heaviness.</li>
+            </ul>
+
+          </li>
+
+          <li>Worked within and <b>expanded 5+ existing systems</b> (resources system, shop system, HUD, tutorial…)
+            <b>integrating feedback from player testing</b> to provide a satisfactory and excellent gaming experience.</li>
+
+          <li><b>Designed, implemented and iterated</b> on the <b>game tutorial</b> by making it more concise and funnier, ensuring that
+            players understood the core mechanics of the game, <b>improving player retention</b>.</li>
+
+          <li><b>Coded</b> some <b>tools</b> to <b>streamline</b> the development team’s <b>workflow</b>.</li>
         </ul>
 
         <!-- 📂 ACCORDIONS -->
@@ -209,13 +234,13 @@
 
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                Weapons Design & Balance
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Enemies Design & Balance
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#projectAccordion">
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
               <div class="accordion-body">
-                Details about balancing weapons, testing spread, and tuning recoil systems.
+                Details about balancing enemies by spreadsheets using Google Sheets. COMING SOON! ⚙️
               </div>
             </div>
           </div>
@@ -223,12 +248,12 @@
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                Premium Packs
+                Game Feel Implementations
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#projectAccordion">
               <div class="accordion-body">
-                Overview of premium packs and player engagement metrics.
+                Overview of game feel effects for altered states. COMING SOON! ⚙️
               </div>
             </div>
           </div>
