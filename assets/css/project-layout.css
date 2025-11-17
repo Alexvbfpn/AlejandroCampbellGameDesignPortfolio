@@ -157,6 +157,12 @@ main.project-theme:has(.divider-buildingsPNG) {
     mask-image: var(--divider-shape);
 }
 
+.section-divider-shadow.divider-zigzag {
+    filter: blur(8px);
+    opacity: 0.4;
+    transform: translateY(-8px);
+}
+
 .divider-zigzag {
     --divider-shape: url("../img/dividers/mountain2.svg");
     -webkit-mask-image: var(--divider-shape);
