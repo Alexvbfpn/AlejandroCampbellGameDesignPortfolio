@@ -959,7 +959,19 @@ section,
   line-height: 0;
 }
 
-.portfolio .portfolio-content:hover .portfolio-info {
+/*.portfolio .portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}*/
+
+/* -- CUIDADO POR SI TE JODE EL HOVER EN ALGUNOS PC */
+@media (hover: hover) and (pointer: fine) {
+  .cs-style-3 figure:hover .portfolio-info {
+    opacity: 1;
+  }
+}
+
+/* Mostrar overlay cuando figure tiene la clase cs-hover (móvil) */
+.cs-style-3 figure.cs-hover .portfolio-info {
   opacity: 1;
 }
 
@@ -1067,6 +1079,12 @@ section,
   align-items: start;
 
 }
+.no-touch .cs-style-3 figure:hover .portfolio-info figcaption,
+.cs-style-3 figure.cs-hover .portfolio-info figcaption {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.4s ease, opacity 0.2s ease;
+}
 
 /* .cs-style-3 figcaption (OLD)
 
@@ -1106,8 +1124,8 @@ transition: transform 0.4s, opacity 0.1s 0.3s;
   word-wrap: break-word;
 }
 
-.no-touch .cs-style-3 figure:hover figcaption,
-.cs-style-3 figure.cs-hover figcaption {
+.no-touch .cs-style-3 figure:hover .portfolio-info figcaption,
+.cs-style-3 figure.cs-hover .portfolio-info figcaption {
   opacity: 1;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
@@ -1116,6 +1134,7 @@ transition: transform 0.4s, opacity 0.1s 0.3s;
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
   -moz-transition: -moz-transform 0.4s, opacity 0.1s;
   transition: transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s ease, opacity 0.2s ease;
 }
 
 .cs-style-3 figcaption a {
