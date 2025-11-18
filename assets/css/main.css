@@ -514,6 +514,9 @@ section,
   background-color: var(--background-color);
   padding: 60px 0;
   overflow: clip;
+  /* New for Parallax Effect */
+  position: relative;
+  z-index: 4;
 }
 
 /*--------------------------------------------------------------
@@ -553,7 +556,11 @@ section,
 .hero {
   width: 100%;
   min-height: 100vh;
-  position: relative;
+  /* position: relative */
+  position: sticky; /*New for Parallax*/
+  top: 0; /*New for Parallax*/
+  overflow: hidden; /*New for Parallax*/
+  z-index: 0; /*New for Parallax*/
   padding: 80px 0;
   display: flex;
   align-items: center;
@@ -629,6 +636,13 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+/* Para Parallax effect (ahora está en sections)*/
+/*#about {
+  position: relative;
+  z-index: 3;
+  background-color: var(--background-color); !* para tapar hero *!
+}*/
+
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
