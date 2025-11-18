@@ -574,6 +574,7 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 25% center;
   z-index: 1;
 }
 
@@ -632,6 +633,59 @@ section,
     font-size: 20px;
   }
 }
+
+.hero-waves {
+  display: block;
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+
+/* Para móviles (pantallas pequeñas) */
+@media (max-width: 768px) {
+  .hero-waves {
+    height: 60px; /* Móviles / tablets pequeñas */
+  }
+  .hero img {
+    object-position: 25% center;
+  }
+}
+
+/*#region --- MAIN HERO ANIMATED WAVES */
+.hero-waves use {
+  fill: var(--background-color);  /* Color de las olas (blancas) */
+}
+
+.wave1 use {
+  opacity: 0.3;
+}
+.wave2 use {
+  opacity: 0.5;
+}
+.wave3 use {
+  opacity: 1;
+}
+
+.wave1 use {
+  animation: move-forever 10s linear infinite;
+}
+.wave2 use {
+  animation: move-forever 8s linear infinite;
+}
+.wave3 use {
+  animation: move-forever 6s linear infinite;
+}
+
+@keyframes move-forever {
+  0% { transform: translate3d(-90px,0,0); }
+  100% { transform: translate3d(85px,0,0); }
+}
+
+/*#endregion */
 
 /*--------------------------------------------------------------
 # About Section
