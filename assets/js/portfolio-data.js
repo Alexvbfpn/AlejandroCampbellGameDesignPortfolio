@@ -120,6 +120,7 @@ const projects =
             storePage: "https://origamingcreations.itch.io/lullaby",
             trailerURL: "https://www.youtube.com/embed/ZrVPbUZk2qM",
             theme: "lullaby",
+            listIconImage: "../img/icons/moonIcon.png",
             emoji: "🎵",
             dividerShape: "divider-wave",
         },
