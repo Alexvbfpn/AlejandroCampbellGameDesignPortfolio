@@ -1,0 +1,103 @@
+/* ===========================
+   ICONOS BASADOS EN IMAGEN
+   (FUNCIONAN AL 100% EN GITHUB PAGES)
+   =========================== */
+
+/* ===========================
+   ICONOS BASADOS EN IMAGEN
+   (FUNCIONAN AL 100% EN GITHUB PAGES)
+   =========================== */
+
+/* Zipline */
+.icon-zipline {
+    --list-image: url('../img/icons/ziplineIcon.png');
+}
+
+/* Grappling Hook / Vertical Hook */
+.icon-grappling-hook {
+    --list-image: url('../img/icons/grapplingHookIcon3.png');
+}
+
+/* Low Health */
+.icon-low-health {
+    --list-image: url('../img/icons/lowHealthIcon.png');
+}
+
+/* Poison */
+.icon-poison {
+    --list-image: url('../img/icons/poisonIcon.png');
+}
+
+/* Broken Bone */
+.icon-broken-bone {
+    --list-image: url('../img/icons/brokenBoneIcon.png');
+}
+
+/* Cursed */
+.icon-cursed {
+    --list-image: url('../img/icons/cursedIcon.png');
+}
+
+/* Acid Exposure */
+.icon-acid {
+    /*--list-image: url('../img/icons/acidIcon.png');*/
+}
+
+/* ===========================
+   ICONOS BASADOS EN EMOJI
+   =========================== */
+
+/* Camera emoji */
+.icon-camera {
+    --list-icon: '🎥';
+}
+
+/* Gear */
+.icon-gear {
+    --list-icon: '⚙️';
+}
+
+/* Fire Damage */
+.icon-fire {
+    --list-icon: '🔥';
+}
+
+/* Dizzy */
+.icon-dizzy {
+    --list-icon: '🌀';
+}
+
+/* Bleeding */
+.icon-blood {
+    --list-icon: '🩸';
+}
+
+/* Sluggish */
+.icon-sluggish {
+    --list-icon: '🐌';
+}
+
+/* Chemistry / Flask (para la sublista de Hermetica) */
+.icon-flask {
+    --list-icon: '⚗️';
+}
+
+/* Sparkles */
+.icon-sparkles {
+    --list-icon: '✨';
+}
+
+/* Joker / Card */
+.icon-joker {
+    --list-icon: '🃏';
+}
+
+/* Character running */
+.icon-runner {
+    --list-icon: '🏃🏻‍♀️';
+}
+
+/* Game controller */
+.icon-controller {
+    --list-icon: '🎮';
+}
