@@ -112,7 +112,7 @@ const projects =
             description: "Lullaby: A 3d platformer videogame",
             genre: "3D Platformer",
             coverImage: "assets/img/portfolio/Lullaby_CoverNight.jpg",
-            link: "https://origamingcreations.itch.io/lullaby",
+            link: "projectsPages/project-details-Lullaby.html",
             categoryFilter: "filter-jam",
             category: "Videogame",
             studio: "Origaming Creations",
