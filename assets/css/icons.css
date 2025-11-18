@@ -52,6 +52,21 @@
     --list-icon: '🎥';
 }
 
+/* Game controller */
+.icon-controller {
+    --list-icon: '🎮';
+}
+
+/* Character running */
+.icon-runner {
+    --list-icon: '🏃🏻‍️';
+}
+
+/* Character running */
+.icon-runner-female {
+    --list-icon: '🏃🏻‍♀️';
+}
+
 /* Gear */
 .icon-gear {
     --list-icon: '⚙️';
@@ -92,12 +107,7 @@
     --list-icon: '🃏';
 }
 
-/* Character running */
-.icon-runner {
-    --list-icon: '🏃🏻‍♀️';
-}
-
 /* Game controller */
-.icon-controller {
-    --list-icon: '🎮';
+.icon-door {
+    --list-icon: '🚪';
 }
