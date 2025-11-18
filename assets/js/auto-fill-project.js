@@ -157,12 +157,13 @@ function applyProjectTheme(theme) {
 
         if(!shadow) return;
 
-        // Aplly new divider shadow shape
-        shadow.classList.add(project.dividerShape);
         // Clean previous classes (any "divider-*")
         shadow.classList.forEach(cls => {
             if (cls.startsWith("divider-")) shadow.classList.remove(cls);
         })
+
+        // Aplly new divider shadow shape
+        shadow.classList.add(project.dividerShape);
 
     }
 
